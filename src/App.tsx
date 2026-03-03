@@ -24,6 +24,8 @@ const Cart = lazy(() => import('./pages/Cart'));
 const MyOrders = lazy(() => import('./pages/MyOrders'));
 const Bundle = lazy(() => import('./pages/Bundle'));
 const MySubscriptions = lazy(() => import('./pages/MySubscriptions'));
+const Nosotros = lazy(() => import('./pages/Nosotros'));
+const FAQPage = lazy(() => import('./pages/FAQ'));
 
 const queryClient = new QueryClient();
 
@@ -72,6 +74,8 @@ const App = () => (
                         <Route path="/mis-suscripciones" element={<MySubscriptions />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/blog/:slug" element={<BlogPost />} />
+                        <Route path="/nosotros" element={<Nosotros />} />
+                        <Route path="/faq" element={<FAQPage />} />
                         <Route path="*" element={<NotFound />} />
                       </Routes>
                     </Suspense>

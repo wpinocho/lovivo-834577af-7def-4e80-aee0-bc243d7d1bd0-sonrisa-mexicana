@@ -1,16 +1,14 @@
+import { Link } from 'react-router-dom'
+
 export const BrandLogoLeft = () => {
   return (
-    <a href="/" aria-label="Home" className="ml-2 flex items-center">
-      {/* TEMPLATE: Replace /logo.png with your brand logo */}
-      <img 
-        src="/logo.png"
-        alt="Logo"
-        className="h-8 w-auto object-contain" 
-        onError={(e) => {
-          e.currentTarget.style.display = 'none';
-          e.currentTarget.parentElement!.innerHTML = '<span class="text-xl font-bold text-black">YourBrand</span>';
-        }}
-      />
-    </a>
+    <Link to="/" aria-label="SONIQ — Inicio" className="flex items-center">
+      <span className="text-2xl font-black tracking-tighter text-foreground">
+        SONIQ
+      </span>
+      <span className="ml-1.5 text-[10px] font-semibold tracking-widest uppercase text-accent mt-1">
+        ®
+      </span>
+    </Link>
   )
 }
