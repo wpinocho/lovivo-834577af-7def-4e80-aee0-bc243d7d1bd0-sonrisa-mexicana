@@ -31,9 +31,17 @@ html {
     --muted: 220 14% 96%;
     --muted-foreground: 220 10% 46%;
 
-    /* Accent = Fresh mint/teal — the brand color */
-    --accent: 162 72% 38%;
+    /* Accent = Vibrant electric violet — joyful & modern */
+    --accent: 258 80% 62%;
     --accent-foreground: 0 0% 100%;
+
+    /* Spark = Warm coral/orange — energy & warmth */
+    --spark: 22 92% 60%;
+    --spark-foreground: 0 0% 100%;
+
+    /* Candy = Hot pink — playful pop */
+    --candy: 340 85% 62%;
+    --candy-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -73,8 +81,14 @@ html {
     --muted: 220 15% 14%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 162 72% 38%;
+    --accent: 258 80% 62%;
     --accent-foreground: 0 0% 100%;
+
+    /* Spark dark mode */
+    --spark: 22 92% 60%;
+    --spark-foreground: 0 0% 100%;
+    --candy: 340 85% 62%;
+    --candy-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 96%;
@@ -118,6 +132,23 @@ html {
 
 .animate-marquee {
   animation: marquee 20s linear infinite;
+}
+
+/* Section gradient utilities */
+.bg-hero-gradient {
+  background: linear-gradient(135deg, hsl(258 80% 16%) 0%, hsl(225 85% 20%) 50%, hsl(258 60% 12%) 100%);
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(135deg, hsl(258 80% 10%) 0%, hsl(213 85% 14%) 100%);
+}
+
+.bg-warm-gradient {
+  background: linear-gradient(135deg, hsl(22 92% 56%) 0%, hsl(340 85% 58%) 100%);
+}
+
+.bg-candy-gradient {
+  background: linear-gradient(135deg, hsl(258 70% 96%) 0%, hsl(22 92% 96%) 100%);
 }
 
 /* Smooth fade-in for sections */

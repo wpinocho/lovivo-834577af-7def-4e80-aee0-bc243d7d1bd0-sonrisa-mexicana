@@ -1,7 +1,7 @@
 # SONIQ — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Inspired by myvariations.com structure.
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage updated with joyful, vibrant colors.
 
 ## Brand
 - **Name**: SONIQ
@@ -9,7 +9,13 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Inspired by
 - **Market**: Mexico 🇲🇽
 - **Language**: Mexican Spanish
 - **Tone**: Young, fresh, confident. Premium but accessible. Apple-style simplicity.
-- **Colors**: Black (#0D0F14) primary, Pure white background, Mint accent (hsl 162 72% 38%), Inter font
+- **Colors**: Black (#0D0F14) primary, Pure white background, Electric violet accent (hsl 258 80% 62%), Coral/orange spark (hsl 22 92% 60%), Hot pink candy (hsl 340 85% 62%), Inter font
+
+## Color Tokens
+- `--accent`: `258 80% 62%` — Vibrant electric violet
+- `--spark`: `22 92% 60%` — Coral/orange (energy)
+- `--candy`: `340 85% 62%` — Hot pink (playful pop)
+- Gradient utilities: `.bg-hero-gradient`, `.bg-dark-gradient`, `.bg-warm-gradient`, `.bg-candy-gradient`
 
 ## Products Created
 | Product | Price | ID |
@@ -36,10 +42,11 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Inspired by
 - `products/funda-viaje.webp` — Travel case
 
 ## Files Modified
-- `src/index.css` — New design tokens (SONIQ brand: B&W + mint, Inter font)
-- `src/templates/EcommerceTemplate.tsx` — New header (mobile menu, product nav) + footer
+- `src/index.css` — SONIQ tokens + spark/candy tokens + gradient utility classes
+- `tailwind.config.ts` — Added spark and candy color tokens
+- `src/templates/EcommerceTemplate.tsx` — Header (mobile menu, product nav) + footer
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
-- `src/pages/ui/IndexUI.tsx` — Complete homepage: hero, social proof bar, benefits, how-it-works, collections, subscription section, reviews, products, trust badges, newsletter
+- `src/pages/ui/IndexUI.tsx` — Joyful colorful homepage: violet hero gradient, candy-gradient benefits, spark/coral CTAs, warm-gradient trust badges
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — SONIQ text logo

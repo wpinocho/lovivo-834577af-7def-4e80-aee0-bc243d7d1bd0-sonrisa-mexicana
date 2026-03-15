@@ -61,6 +61,14 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
+				spark: {
+					DEFAULT: 'hsl(var(--spark))',
+					foreground: 'hsl(var(--spark-foreground))'
+				},
+				candy: {
+					DEFAULT: 'hsl(var(--candy))',
+					foreground: 'hsl(var(--candy-foreground))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'

@@ -262,7 +262,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                   'Envío gratuito incluido en la suscripción',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-background/70">
-                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0" />
+                    <CheckCircle2 className={`h-5 w-5 flex-shrink-0 text-spark`} />
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
@@ -270,7 +270,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <Button
                 asChild
                 size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold h-14 px-8 rounded-full"
+                className="bg-warm-gradient text-spark-foreground hover:opacity-90 font-bold h-14 px-8 rounded-full border-0 shadow-lg shadow-spark/30"
               >
                 <Link to="/productos/cabezales-de-repuesto-soniq-pack-3">
                   Activar suscripción
@@ -418,7 +418,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       )}
 
       {/* ── TRUST BADGES ── */}
-      <section className="py-20 bg-foreground text-background">
+      <section className="py-20 bg-warm-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -428,10 +428,12 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               { icon: CreditCard, title: 'Pago seguro', desc: 'Tarjeta, Oxxo, SPEI y Mercado Pago' },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="flex flex-col items-center gap-3">
-                <Icon className="h-8 w-8 text-accent" />
+                <div className="w-14 h-14 rounded-full bg-background/20 flex items-center justify-center">
+                  <Icon className="h-7 w-7 text-spark-foreground" />
+                </div>
                 <div>
-                  <div className="font-bold text-background text-sm">{title}</div>
-                  <div className="text-background/50 text-xs mt-1 leading-relaxed">{desc}</div>
+                  <div className="font-bold text-spark-foreground text-sm">{title}</div>
+                  <div className="text-spark-foreground/70 text-xs mt-1 leading-relaxed">{desc}</div>
                 </div>
               </div>
             ))}
