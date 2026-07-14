@@ -130,7 +130,7 @@ export const EcommerceTemplate = ({
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <span className="text-2xl font-black tracking-tighter text-background">SONIQ</span>
+            <span className="text-2xl font-black tracking-tighter text-background">Smilo</span>
             <p className="mt-4 text-background/50 text-sm max-w-xs leading-relaxed">
               Cuidado dental moderno, accesible y sin complicaciones. 
               Hecho para México.
@@ -178,7 +178,7 @@ export const EcommerceTemplate = ({
 
         <div className="border-t border-background/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-background/40 text-sm">
-            &copy; 2025 SONIQ. Todos los derechos reservados.
+            &copy; 2025 Smilo. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4 text-background/40 text-xs">
             <span>Envíos a toda la República Mexicana</span>

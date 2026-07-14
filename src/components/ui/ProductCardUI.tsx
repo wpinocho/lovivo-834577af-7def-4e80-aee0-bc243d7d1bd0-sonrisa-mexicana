@@ -7,7 +7,7 @@ import { ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 /**
- * SONIQ ProductCardUI — Clean, minimal, premium DTC
+ * Smilo ProductCardUI — Clean, minimal, premium DTC
  */
 
 interface ProductCardUIProps {

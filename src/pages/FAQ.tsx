@@ -8,12 +8,12 @@ const faqs = [
     category: 'El producto',
     items: [
       {
-        q: '¿Para quién está pensado el SONIQ?',
+        q: '¿Para quién está pensado el Smilo?',
         a: 'Para cualquier persona que quiera una limpieza dental más profunda y efectiva. Sirve tanto si tienes encías sensibles como si solo quieres dientes más blancos. No hay versión infantil — está diseñado exclusivamente para adultos.',
       },
       {
         q: '¿Es bueno para encías sensibles?',
-        a: 'Sí. El SONIQ tiene un modo específico para encías sensibles con vibraciones más suaves. Miles de nuestros clientes con esta condición reportan cero dolor y hasta reducción del sangrado al cepillarse. Si tienes dudas, consulta con tu dentista antes de cambiar tu rutina.',
+        a: 'Sí. El Smilo tiene un modo específico para encías sensibles con vibraciones más suaves. Miles de nuestros clientes con esta condición reportan cero dolor y hasta reducción del sangrado al cepillarse. Si tienes dudas, consulta con tu dentista antes de cambiar tu rutina.',
       },
       {
         q: '¿Cuánto dura la batería?',
@@ -21,7 +21,7 @@ const faqs = [
       },
       {
         q: '¿Puedo usarlo en la regadera?',
-        a: 'Sin problema. El SONIQ tiene certificación IPX7, lo que significa que aguanta sumergido en agua hasta un metro de profundidad por 30 minutos. En la regadera estás más que cubierto.',
+        a: 'Sin problema. El Smilo tiene certificación IPX7, lo que significa que aguanta sumergido en agua hasta un metro de profundidad por 30 minutos. En la regadera estás más que cubierto.',
       },
       {
         q: '¿Qué modos de cepillado tiene?',
@@ -85,7 +85,7 @@ const faqs = [
     items: [
       {
         q: '¿Cuánto tiempo tiene de garantía?',
-        a: 'El SONIQ tiene garantía de 2 años contra defectos de fabricación. Si tu cepillo presenta algún problema de fábrica, lo reemplazamos o te regresamos tu dinero, así de simple.',
+        a: 'El Smilo tiene garantía de 2 años contra defectos de fabricación. Si tu cepillo presenta algún problema de fábrica, lo reemplazamos o te regresamos tu dinero, así de simple.',
       },
       {
         q: '¿Qué pasa si no me convence?',
@@ -134,7 +134,7 @@ export default function FAQ() {
             Preguntas frecuentes
           </h1>
           <p className="text-muted-foreground text-lg">
-            Todo lo que necesitas saber sobre SONIQ y tu compra.
+            Todo lo que necesitas saber sobre Smilo y tu compra.
           </p>
         </div>
 

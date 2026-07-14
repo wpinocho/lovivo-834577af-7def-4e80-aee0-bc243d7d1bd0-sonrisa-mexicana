@@ -37,7 +37,7 @@ export default function Nosotros() {
                 Y los baratos simplemente no funcionan.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Ahí nació la idea de SONIQ: un cepillo eléctrico de verdad, con tecnología sónica real, 
+                Ahí nació la idea de Smilo: un cepillo eléctrico de verdad, con tecnología sónica real, 
                 a un precio que cualquier mexicano pueda pagar.
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -48,7 +48,7 @@ export default function Nosotros() {
             <div className="bg-muted rounded-2xl overflow-hidden">
               <img
                 src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/834577af-7def-4e80-aee0-bc243d7d1bd0/cepillo-electrico-soniq.webp"
-                alt="SONIQ — Cepillo eléctrico premium"
+                alt="Smilo — Cepillo eléctrico premium"
                 className="w-full h-64 object-cover"
               />
             </div>
@@ -111,7 +111,7 @@ export default function Nosotros() {
           </p>
           <Button asChild size="lg" className="rounded-full h-14 px-10 font-bold text-base">
             <Link to="/productos/cepillo-elctrico-soniq">
-              Comprar mi SONIQ — $799
+              Comprar mi Smilo — $799
             </Link>
           </Button>
         </div>

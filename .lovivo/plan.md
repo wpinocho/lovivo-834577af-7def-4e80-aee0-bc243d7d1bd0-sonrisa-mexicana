@@ -1,10 +1,10 @@
-# SONIQ — Cepillo Eléctrico para México 🇲🇽
+# Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage updated with joyful, vibrant colors.
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage updated with joyful, vibrant colors. Brand renamed from SONIQ to **Smilo**.
 
 ## Brand
-- **Name**: SONIQ
+- **Name**: Smilo
 - **Tagline**: Tu boca. Reimaginada.
 - **Market**: Mexico 🇲🇽
 - **Language**: Mexican Spanish
@@ -20,7 +20,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage up
 ## Products Created
 | Product | Price | ID |
 |---------|-------|-----|
-| Cepillo Eléctrico SONIQ | $799 MXN | 17cb3fa5-74ae-4cf7-aa6f-24bc279aec06 |
+| Cepillo Eléctrico Smilo | $799 MXN | 17cb3fa5-74ae-4cf7-aa6f-24bc279aec06 |
 | Cabezales de Repuesto (Pack 3) | $249 MXN | ce9f2986-75ef-4544-a0c3-109abfc9ff60 |
 | Funda de Viaje | $179 MXN | dafb4fb5-047a-499a-9a21-281b4ac6bfe2 |
 
@@ -42,14 +42,14 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage up
 - `products/funda-viaje.webp` — Travel case
 
 ## Files Modified
-- `src/index.css` — SONIQ tokens + spark/candy tokens + gradient utility classes
+- `src/index.css` — Smilo tokens + spark/candy tokens + gradient utility classes
 - `tailwind.config.ts` — Added spark and candy color tokens
 - `src/templates/EcommerceTemplate.tsx` — Header (mobile menu, product nav) + footer
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
 - `src/pages/ui/IndexUI.tsx` — Joyful colorful homepage: violet hero gradient, candy-gradient benefits, spark/coral CTAs, warm-gradient trust badges
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
-- `src/components/BrandLogoLeft.tsx` — SONIQ text logo
+- `src/components/BrandLogoLeft.tsx` — Smilo text logo
 
 ## New Pages
 - `src/pages/Nosotros.tsx` — Brand story, values, stats
@@ -58,6 +58,10 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage up
 ## Routes Added (App.tsx)
 - `/nosotros` → Nosotros page
 - `/faq` → FAQ page
+
+## Recent Changes
+1. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files (36 occurrences)
+2. 2026-07-14 — Homepage redesigned with joyful vibrant colors (violet hero, candy benefits, spark CTAs)
 
 ## Next Steps (Optional)
 - Connect Supabase for order management

@@ -39,7 +39,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         <div className="absolute inset-0">
           <img
             src="/hero-toothbrush.webp"
-            alt="SONIQ Cepillo Eléctrico Sónico"
+            alt="Smilo Cepillo Eléctrico Sónico"
             className="w-full h-full object-cover opacity-30"
             fetchPriority="high"
           />
@@ -186,7 +186,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             {[
               {
                 step: '01',
-                title: 'Pide tu SONIQ',
+                title: 'Pide tu Smilo',
                 desc: 'Compra en línea y recíbelo en tu casa en 24-48 horas. Envío gratis en pedidos mayores a $699.',
               },
               {
@@ -335,7 +335,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               {
                 name: 'Carlos Mendoza',
                 city: 'Monterrey',
-                text: 'Mi dentista me preguntó qué había cambiado en mi rutina. Le conté del SONIQ. Ahora ya lo quiere recomendar a sus pacientes. El mejor cepillo que he tenido.',
+                text: 'Mi dentista me preguntó qué había cambiado en mi rutina. Le conté del Smilo. Ahora ya lo quiere recomendar a sus pacientes. El mejor cepillo que he tenido.',
                 stars: 5,
               },
               {
