@@ -40,7 +40,6 @@ export const EcommerceTemplate = ({
   const navLinks = [
     { label: 'Cepillo', to: '/productos/cepillo-elctrico-soniq' },
     { label: 'Cabezales', to: '/productos/cabezales-de-repuesto-soniq-pack-3' },
-    { label: 'Funda', to: '/productos/funda-de-viaje-soniq' },
     { label: 'Nosotros', to: '/nosotros' },
     { label: 'FAQ', to: '/faq' },
   ]
@@ -149,9 +148,6 @@ export const EcommerceTemplate = ({
               </Link>
               <Link to="/productos/cabezales-de-repuesto-soniq-pack-3" className="block text-background/50 hover:text-background text-sm transition-colors">
                 Cabezales de Repuesto
-              </Link>
-              <Link to="/productos/funda-de-viaje-soniq" className="block text-background/50 hover:text-background text-sm transition-colors">
-                Funda de Viaje
               </Link>
             </div>
           </div>
