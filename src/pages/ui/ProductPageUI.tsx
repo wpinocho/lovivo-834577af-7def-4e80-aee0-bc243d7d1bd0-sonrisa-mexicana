@@ -419,10 +419,15 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Pago 100% seguro</span>
             </div>
             <div className="flex items-center gap-2 flex-wrap">
-              {['VISA', 'Mastercard', 'Mercado Pago', 'OXXO'].map((method) => (
-                <span key={method} className="border border-border rounded-md px-2.5 py-1 text-xs font-bold tracking-wide bg-background text-foreground">
-                  {method}
-                </span>
+              {[
+                { name: 'Visa', src: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png' },
+                { name: 'Mastercard', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png' },
+                { name: 'Mercado Pago', src: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/MercadoPago_logo_%282016%29.svg' },
+                { name: 'OXXO', src: 'https://upload.wikimedia.org/wikipedia/commons/8/82/OXXO_logo.svg' },
+              ].map(({ name, src }) => (
+                <div key={name} className="bg-background border border-border rounded-md px-2.5 py-1.5 flex items-center justify-center h-8">
+                  <img src={src} alt={name} className="h-4 w-auto object-contain" />
+                </div>
               ))}
             </div>
           </div>
@@ -543,47 +548,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           ))}
         </div>
 
-        {/* Featured Testimonials with photos */}
-        <div className="mt-14 border-t pt-12">
-          <h3 className="text-2xl font-black text-center mb-1">Lo que dicen nuestros clientes</h3>
-          <p className="text-center text-muted-foreground text-sm mb-8">Reales. Verificados. Sin filtros.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: 'Mariana López',
-                city: 'Ciudad de México',
-                photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
-                text: 'Mi dentista me dijo que mis dientes nunca habían estado tan limpios. ¡Y solo llevo 2 meses usándolo!',
-              },
-              {
-                name: 'Roberto Sánchez',
-                city: 'Monterrey',
-                photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
-                text: 'Dudé en comprarlo por el precio. Pero de verdad es la mejor inversión en salud que he hecho en años.',
-              },
-              {
-                name: 'Fernanda Vega',
-                city: 'Guadalajara',
-                photo: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face',
-                text: 'La suscripción de cabezales es un detalle brillante. Nunca más voy a olvidar cambiarlos cada 6 meses.',
-              },
-            ].map(({ name, city, photo, text }) => (
-              <div key={name} className="flex flex-col items-center text-center p-6 bg-muted/30 rounded-2xl border border-border">
-                <img src={photo} alt={name} className="w-16 h-16 rounded-full object-cover mb-4 ring-2 ring-accent/20" />
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-foreground/80 text-sm italic leading-relaxed mb-4">"{text}"</p>
-                <div>
-                  <div className="font-semibold text-foreground text-sm">{name}</div>
-                  <div className="text-muted-foreground text-xs">{city} · <span className="text-candy font-medium">Compra verificada</span></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
 
       {/* Sticky Add to Cart Bar */}
