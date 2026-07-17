@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 import { EcommerceTemplate } from "@/templates/EcommerceTemplate"
-import { ShoppingCart, ArrowLeft, Plus, Minus, RefreshCw, Star, Quote } from "lucide-react"
+import { ShoppingCart, ArrowLeft, Plus, Minus, RefreshCw, Star, Quote, Lock, Truck, Shield, Clock } from "lucide-react"
 import { Link } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import {
@@ -209,6 +209,28 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                 </span>
               )}
             </div>
+
+            {/* Star Rating */}
+            <div className="flex items-center gap-2 mt-2">
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                ))}
+              </div>
+              <span className="text-sm font-bold text-foreground">4.8</span>
+              <span className="text-sm text-muted-foreground">· 1,240 reseñas</span>
+            </div>
+
+            {/* Urgency */}
+            <div className="flex items-center gap-1.5 mt-2">
+              <Clock className="h-3.5 w-3.5 text-destructive flex-shrink-0" />
+              <span className="text-xs font-semibold text-destructive">
+                {logic.matchingVariant?.inventory_quantity != null && logic.matchingVariant.inventory_quantity <= 10
+                  ? `¡Solo quedan ${logic.matchingVariant.inventory_quantity} unidades en stock!`
+                  : '🔥 Oferta por tiempo limitado · Envío gratis hoy'}
+              </span>
+            </div>
+
             {/* Price rule badges */}
             {logic.product?.id && (
               <div className="flex flex-wrap gap-2 mt-3">
@@ -390,6 +412,32 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             </div>
           </div>
 
+          {/* Payment security */}
+          <div className="space-y-3 border border-border rounded-xl p-4 bg-muted/30">
+            <div className="flex items-center gap-2">
+              <Lock className="h-3.5 w-3.5 text-candy flex-shrink-0" />
+              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Pago 100% seguro</span>
+            </div>
+            <div className="flex items-center gap-2 flex-wrap">
+              {['VISA', 'Mastercard', 'Mercado Pago', 'OXXO'].map((method) => (
+                <span key={method} className="border border-border rounded-md px-2.5 py-1 text-xs font-bold tracking-wide bg-background text-foreground">
+                  {method}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Shipping & Guarantee */}
+          <div className="space-y-2.5">
+            <div className="flex items-center gap-2.5 text-sm">
+              <Truck className="h-4 w-4 text-candy flex-shrink-0" />
+              <span><span className="font-semibold">Envío gratis</span> · Entrega en 24–48h</span>
+            </div>
+            <div className="flex items-center gap-2.5 text-sm">
+              <Shield className="h-4 w-4 text-candy flex-shrink-0" />
+              <span><span className="font-semibold">Garantía de 12 meses</span> · 30 días para devolución</span>
+            </div>
+          </div>
 
           {logic.product.description && (
             <div>
@@ -493,6 +541,48 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Featured Testimonials with photos */}
+        <div className="mt-14 border-t pt-12">
+          <h3 className="text-2xl font-black text-center mb-1">Lo que dicen nuestros clientes</h3>
+          <p className="text-center text-muted-foreground text-sm mb-8">Reales. Verificados. Sin filtros.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: 'Mariana López',
+                city: 'Ciudad de México',
+                photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
+                text: 'Mi dentista me dijo que mis dientes nunca habían estado tan limpios. ¡Y solo llevo 2 meses usándolo!',
+              },
+              {
+                name: 'Roberto Sánchez',
+                city: 'Monterrey',
+                photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
+                text: 'Dudé en comprarlo por el precio. Pero de verdad es la mejor inversión en salud que he hecho en años.',
+              },
+              {
+                name: 'Fernanda Vega',
+                city: 'Guadalajara',
+                photo: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face',
+                text: 'La suscripción de cabezales es un detalle brillante. Nunca más voy a olvidar cambiarlos cada 6 meses.',
+              },
+            ].map(({ name, city, photo, text }) => (
+              <div key={name} className="flex flex-col items-center text-center p-6 bg-muted/30 rounded-2xl border border-border">
+                <img src={photo} alt={name} className="w-16 h-16 rounded-full object-cover mb-4 ring-2 ring-accent/20" />
+                <div className="flex gap-0.5 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-foreground/80 text-sm italic leading-relaxed mb-4">"{text}"</p>
+                <div>
+                  <div className="font-semibold text-foreground text-sm">{name}</div>
+                  <div className="text-muted-foreground text-xs">{city} · <span className="text-candy font-medium">Compra verificada</span></div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

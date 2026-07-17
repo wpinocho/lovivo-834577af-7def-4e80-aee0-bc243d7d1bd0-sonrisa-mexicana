@@ -62,7 +62,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — Real Smilo logo image (mix-blend-mode: multiply, h-20)
 - `src/App.tsx` — Added /dentistas route
-- `src/pages/ui/ProductPageUI.tsx` — Added reviews section (6 cards, verified badge, star rating)
+- `src/pages/ui/ProductPageUI.tsx` — Full CRO upgrade: star rating, urgency, payment logos, shipping/guarantee icons, testimonials with photos
 
 ## New Pages
 - `src/pages/Nosotros.tsx` — Brand story, values, stats
@@ -84,20 +84,21 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **TODO**: Connect form to email/CRM when Supabase is connected
 
 ## Recent Changes
-1. 2026-07-17 — Added reviews section to ProductPageUI (6 cards, stars, verified badge, accent colors)
-2. 2026-07-17 — Selling plan renamed to "Suscripción" + interval changed to 6 months (displays "$199 / 6 meses")
-3. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
-4. 2026-07-17 — Reordered PDP: options/qty/CTA above description
-5. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
-6. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
-7. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
-8. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
-9. 2026-07-17 — Created /dentistas landing page for dentist distribution program
-10. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
-11. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
-12. 2026-07-16 — Removed Funda de Viaje from nav and footer
-13. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
-14. 2026-07-14 — Homepage redesigned with joyful vibrant colors
+1. 2026-07-17 — PDP CRO upgrade: star rating 4.8/1240 below price, urgency line (dynamic inventory), payment logos (Visa/MC/MP/OXXO) + lock icon, Truck+Shield shipping/guarantee, 3 testimonials with Unsplash photos
+2. 2026-07-17 — Added reviews section to ProductPageUI (6 cards, stars, verified badge, accent colors)
+3. 2026-07-17 — Selling plan renamed to "Suscripción" + interval changed to 6 months (displays "$199 / 6 meses")
+4. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
+5. 2026-07-17 — Reordered PDP: options/qty/CTA above description
+6. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
+7. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
+8. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
+9. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
+10. 2026-07-17 — Created /dentistas landing page for dentist distribution program
+11. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
+12. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
+13. 2026-07-16 — Removed Funda de Viaje from nav and footer
+14. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
+15. 2026-07-14 — Homepage redesigned with joyful vibrant colors
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
@@ -105,8 +106,8 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - 2026-07-17: Logo has white background removed via mix-blend-mode: multiply — works on white/light backgrounds only.
 
 ## Next Steps (Optional)
-- Replace review placeholders with real customer reviews when available
-- Replace testimonial placeholders with real dentist reviews
+- Replace review/testimonial placeholders with real customer reviews when available
+- Replace testimonial placeholder photos with real customer photos
 - Fill in actual pricing/commission values in the Términos section
 - Connect contact form to CRM or email (requires Supabase)
 - Delete Funda de Viaje product + collection from Dashboard if desired
