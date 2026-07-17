@@ -467,7 +467,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             ))}
           </div>
           <h2 className="text-3xl font-black tracking-tighter text-foreground mb-1">4.9 / 5 estrellas</h2>
-          <p className="text-muted-foreground text-sm">+2,000 reseñas verificadas en México</p>
+          <p className="text-muted-foreground text-sm">1,240 reseñas verificadas en México</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
