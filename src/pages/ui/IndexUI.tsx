@@ -212,29 +212,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         </div>
       </section>
 
-      {/* ── COLLECTIONS ── */}
-      {!loadingCollections && collections.length > 0 && (
-        <section id="collections" className="py-24 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-black tracking-tighter text-foreground mb-3">
-                El sistema completo
-              </h2>
-              <p className="text-muted-foreground">Todo lo que necesitas para un cepillado perfecto.</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {collections.map((collection, index) => (
-                <CollectionCard
-                  key={collection.id}
-                  collection={collection}
-                  onViewProducts={handleViewCollectionProducts}
-                  eager={index === 0}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+
 
       {/* ── SUBSCRIPTION SECTION ── */}
       <section className="py-24 bg-foreground text-background">
