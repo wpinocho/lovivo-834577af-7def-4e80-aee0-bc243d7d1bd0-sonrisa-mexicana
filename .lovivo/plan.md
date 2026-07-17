@@ -1,7 +1,7 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`.
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.**
 
 ## Brand
 - **Name**: Smilo
@@ -9,13 +9,21 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **Market**: Mexico 🇲🇽
 - **Language**: Mexican Spanish
 - **Tone**: Young, fresh, confident. Premium but accessible. Apple-style simplicity.
-- **Colors**: Black (#0D0F14) primary, Pure white background, Electric violet accent (hsl 258 80% 62%), Coral/orange spark (hsl 22 92% 60%), Hot pink candy (hsl 340 85% 62%), Inter font
+- **Colors**: Cornflower blue accent + Hot pink CTAs + White background + Dark navy text. Inter font.
+- **Palette inspiration**: myvariations.com — clean, clinical, fresh aesthetic
 
-## Color Tokens
-- `--accent`: `258 80% 62%` — Vibrant electric violet
-- `--spark`: `22 92% 60%` — Coral/orange (energy)
-- `--candy`: `340 85% 62%` — Hot pink (playful pop)
-- Gradient utilities: `.bg-hero-gradient`, `.bg-dark-gradient`, `.bg-warm-gradient`, `.bg-candy-gradient`
+## Color Tokens (UPDATED 2026-07-17)
+- `--primary`: `335 85% 55%` — Hot pink/magenta (main CTA buttons)
+- `--accent`: `220 68% 52%` — Cornflower blue (hero, highlights, icons)
+- `--spark`: `335 85% 55%` — Same hot pink (energy, CTAs)
+- `--candy`: `145 55% 45%` — Mint green (success checks, positive signals)
+- `--background`: `0 0% 100%` — Pure white
+- `--foreground`: `220 15% 8%` — Dark navy text
+- Gradient utilities:
+  - `.bg-hero-gradient` — Blue gradient (220 72% 36% → 220 68% 52% → 215 65% 60%)
+  - `.bg-warm-gradient` — Hot pink gradient (335 85% 50% → 340 80% 62%)
+  - `.bg-candy-gradient` — Light blue/pink pastel gradient
+  - `.bg-dark-gradient` — Deep blue gradient
 
 ## Products Created
 | Product | Price | ID |
@@ -42,11 +50,11 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `products/cabezales-repuesto.webp` — Replacement heads
 
 ## Files Modified
-- `src/index.css` — Smilo tokens + spark/candy tokens + gradient utility classes
-- `tailwind.config.ts` — Added spark and candy color tokens
+- `src/index.css` — Updated color tokens to blue+pink MyVariations palette + updated gradients
+- `tailwind.config.ts` — spark and candy tokens (no change needed, references CSS vars)
 - `src/templates/EcommerceTemplate.tsx` — Header nav + footer (Funda removed)
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
-- `src/pages/ui/IndexUI.tsx` — Joyful colorful homepage
+- `src/pages/ui/IndexUI.tsx` — Hero section: bg-hero-gradient (blue), pink CTA button, white badge/icons
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — Smilo text logo
@@ -65,7 +73,6 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 ## Dentistas Landing Page (/dentistas)
 - **Goal**: Recruit dentists to Smilo's consignment distribution program
 - **Tone**: Professional, close, trustworthy — not generic startup-speak
-- **Sections**: Hero (with real dental office photo), Trust bar, Por qué unirse (4 cards), Cómo funciona (3 steps), Términos (placeholders for pricing), Kit de arranque, Testimonios (2 placeholders), FAQ accordion (6 questions), Contact form
 - **Image**: `/dentistas-hero.webp` — AI-generated dental office with Smilo display
 - **Key message**: Zero inventory investment — consignment model
 - **CTA**: "Quiero ser distribuidor" → scrolls to contact form
@@ -73,15 +80,17 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **TODO**: Connect form to email/CRM when Supabase is connected
 
 ## Recent Changes
-1. 2026-07-17 — Created /dentistas landing page for dentist distribution program
-2. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
-3. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
-4. 2026-07-16 — Removed Funda de Viaje from nav and footer
-5. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
-6. 2026-07-14 — Homepage redesigned with joyful vibrant colors
+1. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
+2. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada." 
+3. 2026-07-17 — Created /dentistas landing page for dentist distribution program
+4. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
+5. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
+6. 2026-07-16 — Removed Funda de Viaje from nav and footer
+7. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
+8. 2026-07-14 — Homepage redesigned with joyful vibrant colors
 
 ## Known Issues
-- 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage. User only asked to remove from nav/menu.
+- 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
 - 2026-07-17: Dentistas contact form shows success toast but doesn't actually send data anywhere — needs Supabase or email integration.
 
 ## Next Steps (Optional)

@@ -93,8 +93,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 { icon: ShieldCheck, text: 'Garantía 2 años' },
                 { icon: RefreshCw, text: '30 días de prueba' },
               ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-2 text-background/50 text-sm">
-                  <Icon className="h-4 w-4 text-accent" />
+                <div key={text} className="flex items-center gap-2 text-background/60 text-sm">
+                  <Icon className="h-4 w-4 text-background/80" />
                   <span>{text}</span>
                 </div>
               ))}
