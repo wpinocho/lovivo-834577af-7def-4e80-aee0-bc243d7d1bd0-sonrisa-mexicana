@@ -1,7 +1,7 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).**
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.**
 
 ## Brand
 - **Name**: Smilo
@@ -11,7 +11,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **Tone**: Young, fresh, confident. Premium but accessible. Apple-style simplicity.
 - **Colors**: Cornflower blue accent + Hot pink CTAs + White background + Dark navy text. Inter font.
 - **Palette inspiration**: myvariations.com — clean, clinical, fresh aesthetic
-- **Logo**: Black serif wordmark "Smilo" with smile arc underneath — white background, used as `<img>` in header
+- **Logo**: Black serif wordmark "Smilo" with smile arc underneath — mix-blend-mode: multiply to remove white background
 
 ## Color Tokens (UPDATED 2026-07-17)
 - `--primary`: `335 85% 55%` — Hot pink/magenta (main CTA buttons)
@@ -53,13 +53,13 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 
 ## Files Modified
 - `src/index.css` — Updated color tokens to blue+pink MyVariations palette + updated gradients
-- `tailwind.config.ts` — spark and candy tokens (no change needed, references CSS vars)
-- `src/templates/EcommerceTemplate.tsx` — Header nav + footer (Funda removed)
+- `tailwind.config.ts` — spark and candy tokens
+- `src/templates/EcommerceTemplate.tsx` — Header nav + footer (Funda removed, ProfileMenu removed)
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
 - `src/pages/ui/IndexUI.tsx` — Hero section: bg-hero-gradient (blue), pink CTA button, white badge/icons
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
-- `src/components/BrandLogoLeft.tsx` — Real Smilo logo image (black wordmark, h-9)
+- `src/components/BrandLogoLeft.tsx` — Real Smilo logo image (mix-blend-mode: multiply, h-20)
 - `src/App.tsx` — Added /dentistas route
 
 ## New Pages
@@ -82,20 +82,23 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **TODO**: Connect form to email/CRM when Supabase is connected
 
 ## Recent Changes
-1. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
-2. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
-3. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
-4. 2026-07-17 — Created /dentistas landing page for dentist distribution program
-5. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
-6. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
-7. 2026-07-16 — Removed Funda de Viaje from nav and footer
-8. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
-9. 2026-07-14 — Homepage redesigned with joyful vibrant colors
+1. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
+2. 2026-07-17 — Reordered PDP: options/qty/CTA above description
+3. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
+4. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
+5. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
+6. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
+7. 2026-07-17 — Created /dentistas landing page for dentist distribution program
+8. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
+9. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
+10. 2026-07-16 — Removed Funda de Viaje from nav and footer
+11. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
+12. 2026-07-14 — Homepage redesigned with joyful vibrant colors
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
 - 2026-07-17: Dentistas contact form shows success toast but doesn't actually send data anywhere — needs Supabase or email integration.
-- 2026-07-17: Logo has white background — looks fine on white header but may clash on dark backgrounds (footer). Consider removing bg from logo image if needed.
+- 2026-07-17: Logo has white background removed via mix-blend-mode: multiply — works on white/light backgrounds only.
 
 ## Next Steps (Optional)
 - Replace testimonial placeholders with real dentist reviews
@@ -104,4 +107,3 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - Delete Funda de Viaje product + collection from Dashboard if desired
 - Connect Supabase for order management
 - Set up Stripe payments (Dashboard > Configuración > Pagos)
-- Consider creating a version of the logo with transparent background for footer use
