@@ -26,6 +26,7 @@ const Bundle = lazy(() => import('./pages/Bundle'));
 const MySubscriptions = lazy(() => import('./pages/MySubscriptions'));
 const Nosotros = lazy(() => import('./pages/Nosotros'));
 const FAQPage = lazy(() => import('./pages/FAQ'));
+const Dentistas = lazy(() => import('./pages/Dentistas'));
 
 const queryClient = new QueryClient();
 
@@ -76,6 +77,7 @@ const App = () => (
                         <Route path="/blog/:slug" element={<BlogPost />} />
                         <Route path="/nosotros" element={<Nosotros />} />
                         <Route path="/faq" element={<FAQPage />} />
+                        <Route path="/dentistas" element={<Dentistas />} />
                         <Route path="*" element={<NotFound />} />
                       </Routes>
                     </Suspense>
