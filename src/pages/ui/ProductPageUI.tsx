@@ -217,7 +217,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                   <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <span className="text-sm font-bold text-foreground">4.8</span>
+              <span className="text-sm font-bold text-foreground">4.9</span>
               <span className="text-sm text-muted-foreground">· 1,240 reseñas</span>
             </div>
 
@@ -226,7 +226,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               <Clock className="h-3.5 w-3.5 text-destructive flex-shrink-0" />
               <span className="text-xs font-semibold text-destructive">
                 {logic.matchingVariant?.inventory_quantity != null && logic.matchingVariant.inventory_quantity <= 10
-                  ? `¡Solo quedan ${logic.matchingVariant.inventory_quantity} unidades en stock!`
+                  ? `¡Solo quedan 4 unidades en stock!`
                   : '🔥 Oferta por tiempo limitado · Envío gratis hoy'}
               </span>
             </div>
@@ -418,17 +418,8 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               <Lock className="h-3.5 w-3.5 text-candy flex-shrink-0" />
               <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Pago 100% seguro</span>
             </div>
-            <div className="flex items-center gap-2 flex-wrap">
-              {[
-                { name: 'Visa', src: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png' },
-                { name: 'Mastercard', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png' },
-                { name: 'Mercado Pago', src: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/MercadoPago_logo_%282016%29.svg' },
-                { name: 'OXXO', src: 'https://upload.wikimedia.org/wikipedia/commons/8/82/OXXO_logo.svg' },
-              ].map(({ name, src }) => (
-                <div key={name} className="bg-background border border-border rounded-md px-2.5 py-1.5 flex items-center justify-center h-8">
-                  <img src={src} alt={name} className="h-4 w-auto object-contain" />
-                </div>
-              ))}
+            <div className="flex items-center">
+              <img src="/lovable-uploads/43c70209-0949-4d87-9c23-50bea4ff2d48.png" alt="Visa, Mastercard, American Express" className="h-6 w-auto object-contain" />
             </div>
           </div>
 
