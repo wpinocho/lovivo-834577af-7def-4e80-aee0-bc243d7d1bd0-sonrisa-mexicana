@@ -292,16 +292,6 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             </div>
           )}
 
-          {logic.product.description && (
-            <div>
-              <h3 className="font-semibold mb-2">Descripción</h3>
-              <div 
-                className="text-muted-foreground prose prose-sm max-w-none"
-                dangerouslySetInnerHTML={{ __html: logic.product.description }}
-              />
-            </div>
-          )}
-
           {/* Product Options */}
           {logic.product.options && logic.product.options.length > 0 && (
             <div className="space-y-4">
@@ -400,6 +390,16 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             </div>
           </div>
 
+
+          {logic.product.description && (
+            <div>
+              <h3 className="font-semibold mb-2">Descripción</h3>
+              <div 
+                className="text-muted-foreground prose prose-sm max-w-none"
+                dangerouslySetInnerHTML={{ __html: logic.product.description }}
+              />
+            </div>
+          )}
 
           <Separator />
 
