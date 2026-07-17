@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom'
 export const BrandLogoLeft = () => {
   return (
     <Link to="/" aria-label="Smilo — Inicio" className="flex items-center">
-      <span className="text-2xl font-black tracking-tighter text-foreground">
-        Smilo
-      </span>
-      <span className="ml-1.5 text-[10px] font-semibold tracking-widest uppercase text-accent mt-1">
-        ®
-      </span>
+      <img
+        src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784252640328-k1wtkp1kd5.webp"
+        alt="Smilo"
+        className="h-9 w-auto object-contain"
+      />
     </Link>
   )
 }
