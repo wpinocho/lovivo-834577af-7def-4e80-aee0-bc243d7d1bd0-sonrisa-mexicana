@@ -41,8 +41,9 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 | ~~Funda de Viaje~~ | ~~0db726a7-6f2d-4043-b323-ed5ba972aaff~~ |
 
 ## Selling Plan
-- Suscripción Mensual — Cabezales: every 3 months, 20% off
+- **Suscripción** (was "Suscripción Mensual") — Cabezales: every **6 months**, 20% off
 - Plan ID: 24f7686e-68fa-4649-b8a9-a179ce6d517d
+- Displays as: "Suscripción — $199 / 6 meses"
 
 ## Images
 - `/hero-toothbrush.webp` — Hero background (public folder)
@@ -82,18 +83,19 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **TODO**: Connect form to email/CRM when Supabase is connected
 
 ## Recent Changes
-1. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
-2. 2026-07-17 — Reordered PDP: options/qty/CTA above description
-3. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
-4. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
-5. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
-6. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
-7. 2026-07-17 — Created /dentistas landing page for dentist distribution program
-8. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
-9. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
-10. 2026-07-16 — Removed Funda de Viaje from nav and footer
-11. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
-12. 2026-07-14 — Homepage redesigned with joyful vibrant colors
+1. 2026-07-17 — Selling plan renamed to "Suscripción" + interval changed to 6 months (displays "$199 / 6 meses")
+2. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
+3. 2026-07-17 — Reordered PDP: options/qty/CTA above description
+4. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
+5. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
+6. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
+7. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
+8. 2026-07-17 — Created /dentistas landing page for dentist distribution program
+9. 2026-07-17 — Generated dentistas-hero.webp (dental office with Smilo display)
+10. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav
+11. 2026-07-16 — Removed Funda de Viaje from nav and footer
+12. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
+13. 2026-07-14 — Homepage redesigned with joyful vibrant colors
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
