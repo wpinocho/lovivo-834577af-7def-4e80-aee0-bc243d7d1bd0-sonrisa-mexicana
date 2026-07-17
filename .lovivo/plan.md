@@ -1,7 +1,7 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage updated with joyful, vibrant colors. Brand renamed from SONIQ to **Smilo**. Funda de Viaje removed from navigation and footer.
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**.
 
 ## Brand
 - **Name**: Smilo
@@ -43,7 +43,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage up
 ## Files Modified
 - `src/index.css` — Smilo tokens + spark/candy tokens + gradient utility classes
 - `tailwind.config.ts` — Added spark and candy color tokens
-- `src/templates/EcommerceTemplate.tsx` — Header nav + footer (Funda removed)
+- `src/templates/EcommerceTemplate.tsx` — Header nav + footer (Funda removed, forced re-deploy 2026-07-16)
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
 - `src/pages/ui/IndexUI.tsx` — Joyful colorful homepage
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
@@ -59,11 +59,16 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Homepage up
 - `/faq` → FAQ page
 
 ## Recent Changes
-1. 2026-07-16 — Removed Funda de Viaje from nav and footer
-2. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
-3. 2026-07-14 — Homepage redesigned with joyful vibrant colors
+1. 2026-07-16 — Force re-deploy of EcommerceTemplate to remove Funda from nav (preview was stale)
+2. 2026-07-16 — Removed Funda de Viaje from nav and footer
+3. 2026-07-14 — Renamed brand from SONIQ to Smilo across all 6 source files
+4. 2026-07-14 — Homepage redesigned with joyful vibrant colors
+
+## Known Issues
+- 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage. User only asked to remove from nav/menu. If they want it removed from the page sections too, the product/collection needs to be deleted from the dashboard.
 
 ## Next Steps (Optional)
+- Delete Funda de Viaje product + collection from Dashboard if desired
 - Connect Supabase for order management
 - Set up Stripe payments (Dashboard > Configuración > Pagos)
 - Configure shipping zones for Mexico

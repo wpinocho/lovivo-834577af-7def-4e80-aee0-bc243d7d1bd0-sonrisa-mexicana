@@ -42,6 +42,7 @@ export const EcommerceTemplate = ({
     { label: 'Cabezales', to: '/productos/cabezales-de-repuesto-soniq-pack-3' },
     { label: 'Nosotros', to: '/nosotros' },
     { label: 'FAQ', to: '/faq' },
+    // Funda de Viaje removed
   ]
 
   const header = (
@@ -174,7 +175,7 @@ export const EcommerceTemplate = ({
 
         <div className="border-t border-background/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-background/40 text-sm">
-            &copy; 2025 Smilo. Todos los derechos reservados.
+            &copy; 2026 Smilo. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4 text-background/40 text-xs">
             <span>Envíos a toda la República Mexicana</span>
