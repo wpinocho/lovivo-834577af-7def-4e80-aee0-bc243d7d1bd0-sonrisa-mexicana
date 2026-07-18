@@ -321,21 +321,24 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                 const isColorOption = option.name.toLowerCase() === "color"
                 const selectedValue = logic.selected[option.name]
 
-                // Color swatch map: value → { bg, border, displayName }
-                const colorMap: Record<string, { bg: string; border: string; displayName: string }> = {
-                  "Negro":  { bg: "#1a1a1a",  border: "#1a1a1a",  displayName: "Negro Clásico" },
-                  "Azul":   { bg: "#3a6fd8",  border: "#3a6fd8",  displayName: "Azul Noche" },
-                  "Naranja":{ bg: "#f97316",  border: "#f97316",  displayName: "Naranja Cempasúchil" },
-                  "Rosa":   { bg: "#f9a8d4",  border: "#f9a8d4",  displayName: "Rosa Pastel" },
-                  "Blanco": { bg: "#ffffff",  border: "#d1d5db",  displayName: "Blanco Sueño" },
+                // Color swatch map: value → { bg, border, displayName, textColor }
+                const colorMap: Record<string, { bg: string; border: string; displayName: string; textColor: string }> = {
+                  "Negro":  { bg: "#1a1a1a",  border: "#1a1a1a",  displayName: "Negro Clásico",         textColor: "#1a1a1a" },
+                  "Azul":   { bg: "#3a6fd8",  border: "#3a6fd8",  displayName: "Azul Noche",            textColor: "#3a6fd8" },
+                  "Naranja":{ bg: "#f97316",  border: "#f97316",  displayName: "Naranja Cempasúchil",   textColor: "#ea6c0a" },
+                  "Rosa":   { bg: "#f9a8d4",  border: "#f9a8d4",  displayName: "Rosa Pastel",           textColor: "#db2777" },
+                  "Blanco": { bg: "#ffffff",  border: "#d1d5db",  displayName: "Blanco Sueño",          textColor: "#9ca3af" },
                 }
 
                 return (
                   <div key={option.name}>
                     {isColorOption ? (
                       <div className="flex items-center gap-1.5 mb-3">
-                        <span className="text-base font-semibold">Color:</span>
-                        <span className="text-base font-semibold text-accent">
+                        <span className="text-base font-semibold text-foreground">Color:</span>
+                        <span
+                          className="text-base font-semibold transition-colors duration-200"
+                          style={{ color: selectedValue ? (colorMap[selectedValue]?.textColor ?? "inherit") : "inherit" }}
+                        >
                           {selectedValue ? (colorMap[selectedValue]?.displayName ?? selectedValue) : "—"}
                         </span>
                       </div>
