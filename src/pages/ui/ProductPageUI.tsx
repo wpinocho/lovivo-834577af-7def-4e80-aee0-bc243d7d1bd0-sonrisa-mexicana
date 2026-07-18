@@ -524,56 +524,11 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
 
       {/* ── WHAT'S INCLUDED ── */}
       <div className="mt-14">
-        <h2 className="text-2xl font-black tracking-tight mb-6 text-foreground">¿Qué incluye?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[
-            {
-              icon: Package,
-              name: "Cepillo Eléctrico Smilo",
-              value: "$1,199",
-              tag: null,
-              desc: "El cepillo principal con tecnología sónica y mango ergonómico premium.",
-            },
-            {
-              icon: Gift,
-              name: "Cabezal de repuesto extra",
-              value: "$79",
-              tag: "Incluido gratis",
-              desc: "Listo para que lo tengas de respaldo desde el primer día.",
-            },
-            {
-              icon: CheckCircle,
-              name: "Cable de carga USB-C",
-              value: "$99",
-              tag: "Incluido gratis",
-              desc: "Compatible con cualquier cargador o banco de energía.",
-            },
-          ].map(({ icon: Icon, name, value, tag, desc }) => (
-            <div
-              key={name}
-              className="relative rounded-2xl border border-border bg-muted/30 p-5 flex flex-col gap-3"
-            >
-              {tag && (
-                <span className="absolute top-4 right-4 text-xs font-bold text-primary bg-primary/10 rounded-full px-2.5 py-0.5">
-                  {tag}
-                </span>
-              )}
-              <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center">
-                <Icon className="h-4 w-4 text-accent" />
-              </div>
-              <div>
-                <div className="font-semibold text-foreground text-sm">{name}</div>
-                <div className="text-xs text-muted-foreground mt-0.5">{desc}</div>
-              </div>
-              <div className="mt-auto flex items-baseline gap-2">
-                <span className="text-sm font-bold text-foreground">{value}</span>
-                {tag && (
-                  <span className="text-xs text-muted-foreground line-through">{value}</span>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+        <img
+          src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784409857259-3ensng6mzm7.webp"
+          alt="El paquete incluye: cepillo eléctrico sónico, cabezal de repuesto y cable USB-C"
+          className="w-full rounded-2xl"
+        />
       </div>
 
       {/* ── DENTAL CLINICS ── */}
