@@ -317,33 +317,80 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           {/* Product Options */}
           {logic.product.options && logic.product.options.length > 0 && (
             <div className="space-y-4">
-              {logic.product.options.map((option) => (
-                <div key={option.name}>
-                  <Label className="text-base font-medium">{option.name}</Label>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {option.values.map((value) => {
-                      const isSelected = logic.selected[option.name] === value
-                      const isAvailable = logic.isOptionValueAvailable(option.name, value)
-                      
-                      return (
-                        <Button
-                          key={value}
-                          variant={isSelected ? "default" : "outline"}
-                          size="sm"
-                          disabled={!isAvailable}
-                          onClick={() => logic.handleOptionSelect(option.name, value)}
-                          className={!isAvailable ? "opacity-50 cursor-not-allowed" : ""}
-                        >
-                          {value}
-                          {!isAvailable && (
-                            <span className="ml-1 text-xs">(Agotado)</span>
-                          )}
-                        </Button>
-                      )
-                    })}
+              {logic.product.options.map((option) => {
+                const isColorOption = option.name.toLowerCase() === "color"
+                const selectedValue = logic.selected[option.name]
+
+                // Color swatch map: value → { bg, border, displayName }
+                const colorMap: Record<string, { bg: string; border: string; displayName: string }> = {
+                  "Negro":  { bg: "#1a1a1a",  border: "#1a1a1a",  displayName: "Negro Clásico" },
+                  "Azul":   { bg: "#3a6fd8",  border: "#3a6fd8",  displayName: "Azul Noche" },
+                  "Naranja":{ bg: "#f97316",  border: "#f97316",  displayName: "Naranja Cempasúchil" },
+                  "Rosa":   { bg: "#f9a8d4",  border: "#f9a8d4",  displayName: "Rosa Pastel" },
+                  "Blanco": { bg: "#ffffff",  border: "#d1d5db",  displayName: "Blanco Sueño" },
+                }
+
+                return (
+                  <div key={option.name}>
+                    {isColorOption ? (
+                      <div className="flex items-center gap-1.5 mb-3">
+                        <span className="text-base font-semibold">Color:</span>
+                        <span className="text-base font-semibold text-accent">
+                          {selectedValue ? (colorMap[selectedValue]?.displayName ?? selectedValue) : "—"}
+                        </span>
+                      </div>
+                    ) : (
+                      <Label className="text-base font-medium">{option.name}</Label>
+                    )}
+
+                    <div className="flex flex-wrap gap-3 mt-1">
+                      {option.values.map((value) => {
+                        const isSelected = logic.selected[option.name] === value
+                        const isAvailable = logic.isOptionValueAvailable(option.name, value)
+                        const swatch = colorMap[value]
+
+                        if (isColorOption && swatch) {
+                          return (
+                            <button
+                              key={value}
+                              title={swatch.displayName}
+                              disabled={!isAvailable}
+                              onClick={() => logic.handleOptionSelect(option.name, value)}
+                              className={cn(
+                                "w-9 h-9 rounded-full transition-all duration-200 focus:outline-none",
+                                isSelected
+                                  ? "ring-2 ring-offset-2 ring-primary scale-110"
+                                  : "ring-1 ring-transparent hover:scale-105",
+                                !isAvailable && "opacity-40 cursor-not-allowed"
+                              )}
+                              style={{
+                                backgroundColor: swatch.bg,
+                                boxShadow: `0 0 0 1.5px ${swatch.border}`,
+                              }}
+                            />
+                          )
+                        }
+
+                        return (
+                          <Button
+                            key={value}
+                            variant={isSelected ? "default" : "outline"}
+                            size="sm"
+                            disabled={!isAvailable}
+                            onClick={() => logic.handleOptionSelect(option.name, value)}
+                            className={!isAvailable ? "opacity-50 cursor-not-allowed" : ""}
+                          >
+                            {value}
+                            {!isAvailable && (
+                              <span className="ml-1 text-xs">(Agotado)</span>
+                            )}
+                          </Button>
+                        )
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           )}
 
