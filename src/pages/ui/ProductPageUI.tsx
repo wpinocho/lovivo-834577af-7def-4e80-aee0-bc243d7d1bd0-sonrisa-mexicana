@@ -529,7 +529,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           {[
             {
               num: "1",
-              image: "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784409857259-3ensng6mzm7.webp",
+              image: "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784410984163-bhu791ftezs.webp",
               title: "El cepillo de dientes eléctrico sónico",
               price: "$999 MXN",
               isFree: false,
