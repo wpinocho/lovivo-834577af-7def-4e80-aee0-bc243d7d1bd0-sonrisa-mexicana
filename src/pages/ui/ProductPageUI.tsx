@@ -491,16 +491,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             </p>
           </div>
 
-          <Separator />
 
-          <Button
-            variant="outline"
-            onClick={logic.handleNavigateBack}
-            className="w-full"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Seguir comprando
-          </Button>
         </div>
       </div>
 
