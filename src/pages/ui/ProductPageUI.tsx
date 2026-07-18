@@ -583,7 +583,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           {/* Image */}
           <div className="relative h-72 lg:h-auto min-h-[340px]">
             <img
-              src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784415126293-reuzvdnm0rh.webp"
+              src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784415483079-wg27o6izdn.webp"
               alt="Display Smilo en consultorio dental"
               className="absolute inset-0 w-full h-full object-cover"
             />
