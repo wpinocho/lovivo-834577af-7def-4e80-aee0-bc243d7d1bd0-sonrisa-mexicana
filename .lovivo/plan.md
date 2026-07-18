@@ -1,7 +1,7 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.**
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.** **Promo bar + scrolling social proof bar added above header site-wide.**
 
 ## Brand
 - **Name**: Smilo
@@ -16,7 +16,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 ## Color Tokens (UPDATED 2026-07-17)
 - `--primary`: `335 85% 55%` — Hot pink/magenta (main CTA buttons)
 - `--accent`: `220 68% 52%` — Cornflower blue (hero, highlights, icons)
-- `--spark`: `335 85% 55%` — Same hot pink (energy, CTAs)
+- `--spark`: `335 85% 55%` — Same hot pink (energy, CTAs, promo bar bg)
 - `--candy`: `145 55% 45%` — Mint green (success checks, positive signals)
 - `--background`: `0 0% 100%` — Pure white
 - `--foreground`: `220 15% 8%` — Dark navy text
@@ -66,7 +66,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 ## Files Modified
 - `src/index.css` — Updated color tokens to blue+pink MyVariations palette + updated gradients
 - `tailwind.config.ts` — spark and candy tokens
-- `src/templates/EcommerceTemplate.tsx` — Header nav + footer (Funda removed, ProfileMenu removed)
+- `src/templates/EcommerceTemplate.tsx` — Promo bar + scrolling bar above header (2026-07-18)
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
 - `src/pages/ui/IndexUI.tsx` — Hero section: bg-hero-gradient (blue), pink CTA button, white badge/icons
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
@@ -94,10 +94,10 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **TODO**: Connect form to email/CRM when Supabase is connected
 
 ## Recent Changes
-1. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names (Negro Clásico, Azul Noche, Naranja Cempasúchil, Rosa Pastel, Blanco Sueño)
-2. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco (both products)
-3. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
-4. 2026-07-18 — Updated logo to new Smilo image (cleaner wordmark version)
+1. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
+2. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names (Negro Clásico, Azul Noche, Naranja Cempasúchil, Rosa Pastel, Blanco Sueño)
+3. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco (both products)
+4. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
 5. 2026-07-18 — PDP: reseñas changed from "+2,000" to "1,240 reseñas verificadas en México"
 6. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image (Visa/MC/Amex only)
 7. 2026-07-17 — PDP CRO upgrade: star rating 4.8/1240 below price, urgency line (dynamic inventory), payment logos (Visa/MC/AmEx) + lock icon, Truck+Shield shipping/guarantee, 3 testimonials with Unsplash photos

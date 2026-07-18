@@ -20,6 +20,15 @@ interface EcommerceTemplateProps {
   hideFloatingCartOnMobile?: boolean
 }
 
+const scrollingItems = [
+  '⭐⭐⭐⭐⭐  "El mejor cepillo que he tenido" — Sofía R., CDMX',
+  '🦷  +5,000 clientes satisfechos en México',
+  '⭐⭐⭐⭐⭐  "Mis encías agradecidas" — Carlos M., MTY',
+  '🚚  Envíos en 24-48 hrs a toda la República',
+  '⭐⭐⭐⭐⭐  "Se lo recomendé a toda mi familia" — Ana G., GDL',
+  '✅  Recomendado por dentistas mexicanos',
+]
+
 export const EcommerceTemplate = ({
   children,
   pageTitle,
@@ -41,88 +50,111 @@ export const EcommerceTemplate = ({
     { label: 'Cabezales', to: '/productos/cabezales-de-repuesto-soniq-pack-3' },
     { label: 'Nosotros', to: '/nosotros' },
     { label: 'FAQ', to: '/faq' },
-    // Funda de Viaje removed
   ]
 
   const header = (
-    <div className={`py-3 ${headerClassName}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12">
-          {/* Logo */}
-          <BrandLogoLeft />
+    <div className={headerClassName}>
+      {/* ── PROMO BAR ── */}
+      <div className="bg-spark py-3 px-4 text-center">
+        <p className="text-base font-black text-white tracking-wide">
+          15% de descuento con el código{' '}
+          <span className="underline underline-offset-2">JULIO15</span>
+        </p>
+      </div>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+      {/* ── SCROLLING SOCIAL PROOF BAR ── */}
+      <div className="bg-foreground overflow-hidden py-2.5">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {[0, 1].map((i) => (
+            <div key={i} className="flex items-center gap-12 px-6">
+              {scrollingItems.map((text, j) => (
+                <span key={j} className="text-sm text-background/70 font-medium">{text}</span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
 
-          {/* Right: Profile + Cart + Mobile menu */}
-          <div className="flex items-center space-x-1">
-            {showCart && (
+      {/* ── MAIN NAV ── */}
+      <div className="py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-12">
+            {/* Logo */}
+            <BrandLogoLeft />
+
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Right: Cart + Mobile menu */}
+            <div className="flex items-center space-x-1">
+              {showCart && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={openCart}
+                  className="relative"
+                  aria-label="Ver carrito"
+                >
+                  <ShoppingCart className="h-5 w-5" />
+                  {totalItems > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-accent text-accent-foreground text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">
+                      {totalItems > 9 ? '9+' : totalItems}
+                    </span>
+                  )}
+                </Button>
+              )}
+
+              {/* Mobile menu toggle */}
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={openCart}
-                className="relative"
-                aria-label="Ver carrito"
+                className="md:hidden"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Menú"
               >
-                <ShoppingCart className="h-5 w-5" />
-                {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-accent text-accent-foreground text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">
-                    {totalItems > 9 ? '9+' : totalItems}
-                  </span>
-                )}
+                {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
-            )}
-
-            {/* Mobile menu toggle */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Menú"
-            >
-              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
+            </div>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden border-t mt-3 pt-4 pb-2 space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-2 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {pageTitle && (
+            <div className="mt-6">
+              <h1 className="text-3xl font-bold text-foreground">{pageTitle}</h1>
+            </div>
+          )}
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t mt-3 pt-4 pb-2 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-2 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted rounded-md transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        )}
-
-        {pageTitle && (
-          <div className="mt-6">
-            <h1 className="text-3xl font-bold text-foreground">{pageTitle}</h1>
-          </div>
-        )}
       </div>
     </div>
   )
 
   const footer = (
-    <div className={`bg-foreground text-background py-16 ${footerClassName}`}>
+    <div className={`bg-foreground text-background py-16 ${footerClassName ?? ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
