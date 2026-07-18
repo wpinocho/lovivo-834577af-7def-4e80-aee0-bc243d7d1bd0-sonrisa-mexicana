@@ -1,7 +1,7 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.** **Promo bar + scrolling social proof bar added above header site-wide.**
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.** **Promo bar + scrolling social proof bar added above header site-wide.** **PDP body expanded with 4 new full-width sections below the 2-col grid.**
 
 ## Brand
 - **Name**: Smilo
@@ -62,6 +62,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `products/cepillo-electrico-soniq.webp` — Product shot
 - `products/cabezales-repuesto.webp` — Replacement heads
 - Logo: `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784402648948-wabf8o8ttxo.webp` (UPDATED 2026-07-18)
+- Dental clinic photo (PDP): `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784405153969-8wsvqau4xy9.webp`
 
 ## Files Modified
 - `src/index.css` — Updated color tokens to blue+pink MyVariations palette + updated gradients
@@ -72,7 +73,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — Updated to new Smilo logo image (2026-07-18 v2)
-- `src/pages/ui/ProductPageUI.tsx` — Color selector: circular swatches + poetic Spanish display names
+- `src/pages/ui/ProductPageUI.tsx` — Full PDP body expansion (2026-07-18 v3): short description, benefits grid, what's included, dental clinics section
 
 ## New Pages
 - `src/pages/Nosotros.tsx` — Brand story, values, stats
@@ -93,22 +94,29 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **Form**: Nombre, Consultorio, Ciudad, Teléfono, Email → shows success toast (no backend yet)
 - **TODO**: Connect form to email/CRM when Supabase is connected
 
+## PDP Body Structure (as of 2026-07-18)
+Below the 2-col grid (gallery + purchase controls), full-width sections in order:
+1. **Benefits grid** — 5 cards (2-col mobile, 5-col desktop): Batería 30d, 31,000 vib/min, 5 modos, Temporizador 2min, Garantía 12m
+2. **¿Qué incluye?** — 3 cards: Cepillo ($1,199), Cabezal gratis ($79), Cable USB-C gratis ($99)
+3. **Dental clinics** — Split card: clinic photo (left) + quote from Dra. Mónica Vargas (right, dark bg)
+4. **Reviews section** — 6 review cards with 4.9/5 rating
+
 ## Recent Changes
-1. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
-2. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names (Negro Clásico, Azul Noche, Naranja Cempasúchil, Rosa Pastel, Blanco Sueño)
-3. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco (both products)
-4. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
-5. 2026-07-18 — PDP: reseñas changed from "+2,000" to "1,240 reseñas verificadas en México"
-6. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image (Visa/MC/Amex only)
-7. 2026-07-17 — PDP CRO upgrade: star rating 4.8/1240 below price, urgency line (dynamic inventory), payment logos (Visa/MC/AmEx) + lock icon, Truck+Shield shipping/guarantee, 3 testimonials with Unsplash photos
-8. 2026-07-17 — Added reviews section to ProductPageUI (6 cards, stars, verified badge, accent colors)
-9. 2026-07-17 — Selling plan renamed to "Suscripción" + interval changed to 6 months (displays "$199 / 6 meses")
-10. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
-11. 2026-07-17 — Reordered PDP: options/qty/CTA above description
-12. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
-13. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
-14. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
-15. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
+1. 2026-07-18 — PDP body: added benefits grid, what's included, dental clinics section; replaced description with short 2-line paragraph
+2. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
+3. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names
+4. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco
+5. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
+6. 2026-07-18 — PDP: reseñas changed to "1,240 reseñas verificadas en México"
+7. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image
+8. 2026-07-17 — PDP CRO upgrade: star rating, urgency, payment logos, Truck+Shield, 3 testimonials
+9. 2026-07-17 — Added reviews section to ProductPageUI (6 cards)
+10. 2026-07-17 — Selling plan renamed to "Suscripción" + 6 months interval
+11. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
+12. 2026-07-17 — Reordered PDP: options/qty/CTA above description
+13. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply
+14. 2026-07-17 — Replaced text logo with real Smilo image
+15. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
@@ -117,7 +125,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 
 ## Next Steps (Optional)
 - Replace review/testimonial placeholders with real customer reviews when available
-- Replace testimonial placeholder photos with real customer photos
+- Replace dentist quote with real dentist testimonial when available
 - Fill in actual pricing/commission values in the Términos section
 - Connect contact form to CRM or email (requires Supabase)
 - Delete Funda de Viaje product + collection from Dashboard if desired

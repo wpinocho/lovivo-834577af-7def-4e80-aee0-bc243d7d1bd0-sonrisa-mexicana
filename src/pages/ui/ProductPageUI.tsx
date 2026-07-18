@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 import { EcommerceTemplate } from "@/templates/EcommerceTemplate"
-import { ShoppingCart, ArrowLeft, Plus, Minus, RefreshCw, Star, Quote, Lock, Truck, Shield, Clock } from "lucide-react"
+import { ShoppingCart, ArrowLeft, Plus, Minus, RefreshCw, Star, Quote, Lock, Truck, Shield, Clock, Battery, Zap, SlidersHorizontal, Package, Gift, CheckCircle, MapPin } from "lucide-react"
 import { Link } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import {
@@ -485,15 +485,11 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             </div>
           </div>
 
-          {logic.product.description && (
-            <div>
-              <h3 className="font-semibold mb-2">Descripción</h3>
-              <div 
-                className="text-muted-foreground prose prose-sm max-w-none"
-                dangerouslySetInnerHTML={{ __html: logic.product.description }}
-              />
-            </div>
-          )}
+          <div>
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              Smilo usa tecnología sónica de 31,000 vibraciones por minuto para remover hasta 10× más placa que un cepillo manual. Con 5 modos inteligentes de cepillado, temporizador profesional de 2 minutos y hasta 30 días de autonomía, redefine lo que significa cepillarse bien.
+            </p>
+          </div>
 
           <Separator />
 
@@ -505,6 +501,128 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Seguir comprando
           </Button>
+        </div>
+      </div>
+
+      {/* ── BENEFITS GRID ── */}
+      <div className="mt-16 border-t pt-14">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          {[
+            { icon: Battery,           stat: "30 días",   label: "Batería",       sub: "sin recargar" },
+            { icon: Zap,               stat: "31,000",    label: "Vibraciones",   sub: "por minuto" },
+            { icon: SlidersHorizontal, stat: "5 modos",   label: "Intensidades",  sub: "de cepillado" },
+            { icon: Clock,             stat: "2 min",     label: "Temporizador",  sub: "alerta c/30s" },
+            { icon: Shield,            stat: "12 meses",  label: "Garantía",      sub: "o te devolvemos" },
+          ].map(({ icon: Icon, stat, label, sub }) => (
+            <div
+              key={label}
+              className="flex flex-col items-center text-center bg-muted/40 rounded-2xl p-5 border border-border gap-2 hover:border-accent/40 transition-colors"
+            >
+              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                <Icon className="h-5 w-5 text-accent" />
+              </div>
+              <span className="text-2xl font-black tracking-tight text-foreground leading-none">{stat}</span>
+              <div>
+                <div className="text-sm font-semibold text-foreground">{label}</div>
+                <div className="text-xs text-muted-foreground">{sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── WHAT'S INCLUDED ── */}
+      <div className="mt-14">
+        <h2 className="text-2xl font-black tracking-tight mb-6 text-foreground">¿Qué incluye?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            {
+              icon: Package,
+              name: "Cepillo Eléctrico Smilo",
+              value: "$1,199",
+              tag: null,
+              desc: "El cepillo principal con tecnología sónica y mango ergonómico premium.",
+            },
+            {
+              icon: Gift,
+              name: "Cabezal de repuesto extra",
+              value: "$79",
+              tag: "Incluido gratis",
+              desc: "Listo para que lo tengas de respaldo desde el primer día.",
+            },
+            {
+              icon: CheckCircle,
+              name: "Cable de carga USB-C",
+              value: "$99",
+              tag: "Incluido gratis",
+              desc: "Compatible con cualquier cargador o banco de energía.",
+            },
+          ].map(({ icon: Icon, name, value, tag, desc }) => (
+            <div
+              key={name}
+              className="relative rounded-2xl border border-border bg-muted/30 p-5 flex flex-col gap-3"
+            >
+              {tag && (
+                <span className="absolute top-4 right-4 text-xs font-bold text-primary bg-primary/10 rounded-full px-2.5 py-0.5">
+                  {tag}
+                </span>
+              )}
+              <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center">
+                <Icon className="h-4 w-4 text-accent" />
+              </div>
+              <div>
+                <div className="font-semibold text-foreground text-sm">{name}</div>
+                <div className="text-xs text-muted-foreground mt-0.5">{desc}</div>
+              </div>
+              <div className="mt-auto flex items-baseline gap-2">
+                <span className="text-sm font-bold text-foreground">{value}</span>
+                {tag && (
+                  <span className="text-xs text-muted-foreground line-through">{value}</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── DENTAL CLINICS ── */}
+      <div className="mt-14 rounded-3xl overflow-hidden border border-border">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Image */}
+          <div className="relative h-72 lg:h-auto min-h-[340px]">
+            <img
+              src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784405153969-8wsvqau4xy9.webp"
+              alt="Display Smilo en consultorio dental"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+          {/* Text */}
+          <div className="bg-foreground flex flex-col justify-center p-8 lg:p-12 gap-6">
+            <div className="flex items-center gap-2 text-primary">
+              <MapPin className="h-4 w-4" />
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">En consultorios de México</span>
+            </div>
+            <h2 className="text-2xl lg:text-3xl font-black tracking-tight leading-tight text-background">
+              Ya está en consultorios dentales de todo México.
+            </h2>
+            <blockquote className="border-l-2 border-primary pl-5">
+              <p className="text-background/70 text-sm leading-relaxed italic">
+                "Llevo tres meses recomendando el Smilo a mis pacientes. Los resultados son notables — mejor higiene, menos placa y cero quejas de sensibilidad. Es el primero que recomendaría sin dudarlo."
+              </p>
+              <footer className="mt-3">
+                <div className="font-semibold text-background text-sm">Dra. Mónica Vargas</div>
+                <div className="text-background/50 text-xs">Odontóloga · Clínica DentalPro, CDMX</div>
+              </footer>
+            </blockquote>
+            <div className="flex items-center gap-3">
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                ))}
+              </div>
+              <span className="text-background/50 text-xs">Recomendado por dentistas profesionales</span>
+            </div>
+          </div>
         </div>
       </div>
 
