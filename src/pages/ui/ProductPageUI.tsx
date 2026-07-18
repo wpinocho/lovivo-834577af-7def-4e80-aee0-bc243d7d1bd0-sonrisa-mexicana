@@ -69,12 +69,20 @@ interface ProductPageUIProps {
   }
 }
 
+// Local color → image override (shown when DB variants don't have per-color images)
+const COLOR_IMAGE_MAP: Record<string, string> = {
+  "Negro": "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784415483079-wg27o6izdn.webp",
+  "Rosa":  "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784411895621-swfyokqws0m.webp",
+}
+
 export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
   const { ref: ctaRef, inView: ctaInView } = useInView({ threshold: 0 })
-  
-  // Current displayed image (selected thumbnail or variant image or first image)
-  const displayImage = selectedImage || logic.displayImages?.[0] || logic.currentImage || "/placeholder.svg"
+
+  // Color-aware display image: thumbnail click → variant DB image → local color map → first product image
+  const selectedColor = logic.selected?.["Color"]
+  const colorOverrideImage = selectedColor ? (COLOR_IMAGE_MAP[selectedColor] ?? null) : null
+  const displayImage = selectedImage || colorOverrideImage || logic.currentImage || logic.displayImages?.[0] || "/placeholder.svg"
   
   // Reset selected image when variant changes
   useEffect(() => {
