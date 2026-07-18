@@ -1,7 +1,7 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.**
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.**
 
 ## Brand
 - **Name**: Smilo
@@ -29,9 +29,13 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 ## Products Created
 | Product | Price | ID |
 |---------|-------|-----|
-| Cepillo Eléctrico Smilo | $799 MXN | 17cb3fa5-74ae-4cf7-aa6f-24bc279aec06 |
+| Cepillo Eléctrico Smilo | $899 MXN | 17cb3fa5-74ae-4cf7-aa6f-24bc279aec06 |
 | Cabezales de Repuesto (Pack 3) | $249 MXN | ce9f2986-75ef-4544-a0c3-109abfc9ff60 |
 | ~~Funda de Viaje~~ | ~~$179 MXN~~ | ~~dafb4fb5-047a-499a-9a21-281b4ac6bfe2~~ |
+
+## Product Variants (Color names in Spanish)
+- Cepillo: Negro, Azul, Naranja, Rosa, Blanco
+- Cabezales: Negro, Blanco
 
 ## Collections Created
 | Collection | ID |
@@ -82,21 +86,21 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **TODO**: Connect form to email/CRM when Supabase is connected
 
 ## Recent Changes
-1. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
-2. 2026-07-18 — Updated logo to new Smilo image (cleaner wordmark version)
-3. 2026-07-18 — PDP: reseñas changed from "+2,000" to "1,240 reseñas verificadas en México"
-4. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image (Visa/MC/Amex only)
-5. 2026-07-17 — PDP CRO upgrade: star rating 4.8/1240 below price, urgency line (dynamic inventory), payment logos (Visa/MC/AmEx) + lock icon, Truck+Shield shipping/guarantee, 3 testimonials with Unsplash photos
-6. 2026-07-17 — Added reviews section to ProductPageUI (6 cards, stars, verified badge, accent colors)
-7. 2026-07-17 — Selling plan renamed to "Suscripción" + interval changed to 6 months (displays "$199 / 6 meses")
-8. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
-9. 2026-07-17 — Reordered PDP: options/qty/CTA above description
-10. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
-11. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
-12. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
-13. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
-14. 2026-07-17 — Created /dentistas landing page for dentist distribution program
-15. 2026-07-16 — Removed Funda de Viaje from nav and footer
+1. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco (both products)
+2. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
+3. 2026-07-18 — Updated logo to new Smilo image (cleaner wordmark version)
+4. 2026-07-18 — PDP: reseñas changed from "+2,000" to "1,240 reseñas verificadas en México"
+5. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image (Visa/MC/Amex only)
+6. 2026-07-17 — PDP CRO upgrade: star rating 4.8/1240 below price, urgency line (dynamic inventory), payment logos (Visa/MC/AmEx) + lock icon, Truck+Shield shipping/guarantee, 3 testimonials with Unsplash photos
+7. 2026-07-17 — Added reviews section to ProductPageUI (6 cards, stars, verified badge, accent colors)
+8. 2026-07-17 — Selling plan renamed to "Suscripción" + interval changed to 6 months (displays "$199 / 6 meses")
+9. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
+10. 2026-07-17 — Reordered PDP: options/qty/CTA above description
+11. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply (transparent bg)
+12. 2026-07-17 — Replaced text logo with real Smilo image (black wordmark + smile arc)
+13. 2026-07-17 — Updated full color palette to MyVariations-inspired blue+pink scheme
+14. 2026-07-17 — Hero section updated: blue gradient bg, pink CTA button, white badge/icons, pink "Reimaginada."
+15. 2026-07-17 — Created /dentistas landing page for dentist distribution program
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
