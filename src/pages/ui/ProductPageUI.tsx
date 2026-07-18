@@ -529,23 +529,21 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           {[
             {
               num: "1",
-              image: "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784410984163-bhu791ftezs.webp",
+              image: "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784411895621-swfyokqws0m.webp",
               title: "El cepillo de dientes eléctrico sónico",
               price: "$999 MXN",
               isFree: false,
             },
             {
               num: "2",
-              image: null,
-              icon: Package,
+              image: "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784411895622-z5zsbz0vq8l.webp",
               title: "1 Cabezal de cepillo de cerdas suaves",
               price: "$119 MXN",
               isFree: true,
             },
             {
               num: "3",
-              image: null,
-              icon: RefreshCw,
+              image: "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784411895622-y6dihcqnj8.webp",
               title: "Cable de carga USB-C",
               price: "$79 MXN",
               isFree: true,
