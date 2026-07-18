@@ -62,7 +62,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `products/cepillo-electrico-soniq.webp` — Product shot
 - `products/cabezales-repuesto.webp` — Replacement heads
 - Logo: `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784402648948-wabf8o8ttxo.webp` (UPDATED 2026-07-18)
-- Dental clinic photo (PDP): `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784405153969-8wsvqau4xy9.webp`
+- Dental clinic photo (PDP): `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784415126293-reuzvdnm0rh.webp` (UPDATED 2026-07-18)
 
 ## Files Modified
 - `src/index.css` — Updated color tokens to blue+pink MyVariations palette + updated gradients
@@ -98,31 +98,30 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 Below the 2-col grid (gallery + purchase controls), full-width sections in order:
 1. **Benefits grid** — 5 cards (2-col mobile, 5-col desktop): Batería 30d, 31,000 vib/min, 5 modos, Temporizador 2min, Garantía 12m
 2. **El paquete incluye** — 3 cards with green-mint bg (#eef4eb): Cepillo ($999 MXN), Cabezal gratis ($119 MXN), Cable USB-C gratis ($79 MXN)
-3. **Dental clinics** — Split card: clinic photo (left) + quote from Dra. Mónica Vargas (right, dark bg)
+3. **Dental clinics** — Split card: dentist photo (left) + quote from Dra. Mónica Vargas (right, dark bg)
 4. **Reviews section** — 6 review cards with 4.9/5 rating
 
 ## Recent Changes
-1. 2026-07-18 — "El paquete incluye" section restored to 3-card design (green-mint cards, numbered pink badges, price + Gratis labels)
-2. 2026-07-18 — "¿Qué incluye?" was temporarily replaced with a single full-width image, then reverted
-3. 2026-07-18 — PDP body: added benefits grid, what's included, dental clinics section; replaced description with short 2-line paragraph
-4. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
-5. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names
-6. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco
-7. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
-8. 2026-07-18 — PDP: reseñas changed to "1,240 reseñas verificadas en México"
-9. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image
-10. 2026-07-17 — PDP CRO upgrade: star rating, urgency, payment logos, Truck+Shield, 3 testimonials
-11. 2026-07-17 — Added reviews section to ProductPageUI (6 cards)
-12. 2026-07-17 — Selling plan renamed to "Suscripción" + 6 months interval
-13. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
-14. 2026-07-17 — Reordered PDP: options/qty/CTA above description
-15. 2026-07-17 — Logo enlarged to h-20 + mix-blend-mode: multiply
+1. 2026-07-18 — Replaced "Consultorios de México" section image with new dentist photo
+2. 2026-07-18 — "El paquete incluye" section restored to 3-card design (green-mint cards, numbered pink badges, price + Gratis labels)
+3. 2026-07-18 — "¿Qué incluye?" was temporarily replaced with a single full-width image, then reverted
+4. 2026-07-18 — PDP body: added benefits grid, what's included, dental clinics section; replaced description with short 2-line paragraph
+5. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
+6. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names
+7. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco
+8. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
+9. 2026-07-18 — PDP: reseñas changed to "1,240 reseñas verificadas en México"
+10. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image
+11. 2026-07-17 — PDP CRO upgrade: star rating, urgency, payment logos, Truck+Shield, 3 testimonials
+12. 2026-07-17 — Added reviews section to ProductPageUI (6 cards)
+13. 2026-07-17 — Selling plan renamed to "Suscripción" + 6 months interval
+14. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
+15. 2026-07-17 — Reordered PDP: options/qty/CTA above description
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
 - 2026-07-17: Dentistas contact form shows success toast but doesn't actually send data anywhere — needs Supabase or email integration.
 - 2026-07-17: Logo has white background removed via mix-blend-mode: multiply — works on white/light backgrounds only.
-- 2026-07-18: Cards 2 & 3 in "El paquete incluye" use placeholder icons (Package, RefreshCw) — ideally replace with real product photography of brush head and USB-C cable.
 
 ## Next Steps (Optional)
 - Replace review/testimonial placeholders with real customer reviews when available
@@ -132,4 +131,3 @@ Below the 2-col grid (gallery + purchase controls), full-width sections in order
 - Delete Funda de Viaje product + collection from Dashboard if desired
 - Connect Supabase for order management
 - Set up Stripe payments (Dashboard > Configuración > Pagos)
-- Add real product images for cabezal and cable USB-C in the "paquete incluye" cards
