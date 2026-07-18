@@ -524,11 +524,59 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
 
       {/* ── WHAT'S INCLUDED ── */}
       <div className="mt-14">
-        <img
-          src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784409857259-3ensng6mzm7.webp"
-          alt="El paquete incluye: cepillo eléctrico sónico, cabezal de repuesto y cable USB-C"
-          className="w-full rounded-2xl"
-        />
+        <h2 className="text-2xl font-black tracking-tight text-foreground mb-8">El paquete incluye</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {[
+            {
+              num: "1",
+              image: "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784409857259-3ensng6mzm7.webp",
+              title: "El cepillo de dientes eléctrico sónico",
+              price: "$999 MXN",
+              isFree: false,
+            },
+            {
+              num: "2",
+              image: null,
+              icon: Package,
+              title: "1 Cabezal de cepillo de cerdas suaves",
+              price: "$119 MXN",
+              isFree: true,
+            },
+            {
+              num: "3",
+              image: null,
+              icon: RefreshCw,
+              title: "Cable de carga USB-C",
+              price: "$79 MXN",
+              isFree: true,
+            },
+          ].map(({ num, image, icon: Icon, title, price, isFree }) => (
+            <div key={num} className="relative flex flex-col rounded-2xl overflow-hidden border border-border bg-[#eef4eb]">
+              {/* Number badge */}
+              <div className="absolute top-3 left-3 w-7 h-7 rounded-full bg-primary flex items-center justify-center z-10">
+                <span className="text-xs font-bold text-primary-foreground">{num}</span>
+              </div>
+              {/* Image area */}
+              <div className="flex items-center justify-center h-52 bg-[#eef4eb] px-6 pt-8 pb-4">
+                {image ? (
+                  <img src={image} alt={title} className="h-full object-contain" style={{maxHeight: 160}} />
+                ) : Icon ? (
+                  <Icon className="h-20 w-20 text-muted-foreground/40" />
+                ) : null}
+              </div>
+              {/* Text */}
+              <div className="bg-background px-5 py-4 flex flex-col gap-1 flex-1">
+                <p className="font-semibold text-foreground text-sm leading-snug">{title}</p>
+                <p className={isFree ? "text-muted-foreground text-sm line-through" : "text-primary font-bold text-sm"}>
+                  Valor de {price}
+                </p>
+                {isFree && (
+                  <p className="text-primary font-bold text-sm">Gratis</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ── DENTAL CLINICS ── */}
