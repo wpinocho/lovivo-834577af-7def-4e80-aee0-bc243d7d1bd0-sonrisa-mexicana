@@ -494,10 +494,10 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           </div>
 
           <div className="space-y-3">
-            <p className="text-muted-foreground leading-relaxed text-sm">
+            <p className="text-foreground leading-relaxed text-lg">
               ¡Ya está! El cepillo que tus dientes estaban esperando — sin el precio absurdo. Diseñado pensando en la recomendación de dentistas y con tecnología sónica, el cepillo SMILO limpia a fondo sin dañar tus encías, con hasta 30 días de autonomía.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-sm">
+            <p className="text-foreground leading-relaxed text-lg">
               Se adapta a tu sonrisa gracias a sus 5 modos de cepillado, para una limpieza profunda todos los días.
             </p>
           </div>
