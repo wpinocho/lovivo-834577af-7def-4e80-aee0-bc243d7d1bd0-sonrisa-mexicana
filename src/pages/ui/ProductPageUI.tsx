@@ -493,9 +493,12 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             </div>
           </div>
 
-          <div>
+          <div className="space-y-3">
             <p className="text-muted-foreground leading-relaxed text-sm">
-              Smilo usa tecnología sónica de 31,000 vibraciones por minuto para remover hasta 10× más placa que un cepillo manual. Con 5 modos inteligentes de cepillado, temporizador profesional de 2 minutos y hasta 30 días de autonomía, redefine lo que significa cepillarse bien.
+              ¡Ya está! El cepillo que tus dientes estaban esperando — sin el precio absurdo. Diseñado pensando en la recomendación de dentistas y con tecnología sónica, el cepillo SMILO limpia a fondo sin dañar tus encías, con hasta 30 días de autonomía.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              Se adapta a tu sonrisa gracias a sus 5 modos de cepillado, para una limpieza profunda todos los días.
             </p>
           </div>
 
