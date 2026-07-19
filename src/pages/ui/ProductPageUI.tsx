@@ -610,8 +610,8 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                 "Llevo tres meses recomendando el Smilo a mis pacientes. Los resultados son notables — mejor higiene, menos placa y cero quejas de sensibilidad. Es el primero que recomendaría sin dudarlo."
               </p>
               <footer className="mt-3">
-                <div className="font-semibold text-background text-sm">Dra. Mónica Vargas</div>
-                <div className="text-background/50 text-xs">Odontóloga · Clínica DentalPro, CDMX</div>
+                <div className="font-semibold text-background text-sm">Dr. Alejandro Fuentes</div>
+                <div className="text-background/50 text-xs">Cirujano Dentista · Clínica DentalPro, CDMX</div>
               </footer>
             </blockquote>
             <div className="flex items-center gap-3">
