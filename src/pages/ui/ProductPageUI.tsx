@@ -483,12 +483,12 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
 
           {/* Shipping & Guarantee */}
           <div className="space-y-2.5">
-            <div className="flex items-center gap-2.5 text-sm">
-              <Truck className="h-4 w-4 text-candy flex-shrink-0" />
+            <div className="flex items-center gap-2.5 text-lg">
+              <Truck className="h-5 w-5 text-candy flex-shrink-0" />
               <span><span className="font-semibold">Envío gratis</span> · Entrega en 24–48h</span>
             </div>
-            <div className="flex items-center gap-2.5 text-sm">
-              <Shield className="h-4 w-4 text-candy flex-shrink-0" />
+            <div className="flex items-center gap-2.5 text-lg">
+              <Shield className="h-5 w-5 text-candy flex-shrink-0" />
               <span><span className="font-semibold">Garantía de 12 meses</span> · 30 días para devolución</span>
             </div>
           </div>
