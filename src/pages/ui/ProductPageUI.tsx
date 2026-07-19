@@ -508,13 +508,12 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
 
       {/* ── BENEFITS GRID ── */}
       <div className="mt-16 border-t pt-14">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { icon: Battery,           stat: "30 días",   label: "Batería",       sub: "sin recargar" },
             { icon: Zap,               stat: "31,000",    label: "Vibraciones",   sub: "por minuto" },
             { icon: SlidersHorizontal, stat: "5 modos",   label: "Intensidades",  sub: "de cepillado" },
             { icon: Clock,             stat: "2 min",     label: "Temporizador",  sub: "alerta c/30s" },
-            { icon: Shield,            stat: "12 meses",  label: "Garantía",      sub: "o te devolvemos" },
           ].map(({ icon: Icon, stat, label, sub }) => (
             <div
               key={label}
