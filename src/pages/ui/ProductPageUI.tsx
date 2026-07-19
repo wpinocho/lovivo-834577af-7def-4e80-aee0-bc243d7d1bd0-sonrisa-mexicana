@@ -557,13 +557,13 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               isFree: true,
             },
           ].map(({ num, image, icon: Icon, title, price, isFree }) => (
-            <div key={num} className="relative flex flex-col rounded-2xl overflow-hidden border border-border bg-[#eef4eb]">
+            <div key={num} className="relative flex flex-col rounded-2xl overflow-hidden border border-border bg-[#cce0b0]">
               {/* Number badge */}
               <div className="absolute top-3 left-3 w-7 h-7 rounded-full bg-primary flex items-center justify-center z-10">
                 <span className="text-xs font-bold text-primary-foreground">{num}</span>
               </div>
               {/* Image area */}
-              <div className="flex items-center justify-center h-52 bg-[#eef4eb] px-6 pt-8 pb-4">
+              <div className="flex items-center justify-center h-52 bg-[#cce0b0] px-6 pt-8 pb-4">
                 {image ? (
                   <img src={image} alt={title} className="h-full object-contain" style={{maxHeight: 160}} />
                 ) : Icon ? (
