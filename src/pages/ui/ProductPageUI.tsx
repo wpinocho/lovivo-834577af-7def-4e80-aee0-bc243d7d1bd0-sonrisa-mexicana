@@ -500,6 +500,13 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             <p className="text-foreground leading-relaxed text-lg">
               Diseñado pensando en la recomendación de dentistas, el cepillo SMILO limpia a fondo con tecnología sónica, sin dañar tus encías, y se adapta a tu sonrisa para una limpieza profunda todos los días.
             </p>
+            <div className="w-full rounded-2xl overflow-hidden mt-4">
+              <img
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784516025488-ko6ksz6t9qg.webp"
+                alt="Sin Smilo vs Con Smilo — comparación de limpieza sónica"
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
 
 
