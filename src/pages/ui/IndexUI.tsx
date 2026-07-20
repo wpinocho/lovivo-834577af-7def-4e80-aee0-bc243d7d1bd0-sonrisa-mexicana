@@ -35,8 +35,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
       {/* ── HERO ── */}
       <section className="relative flex flex-col lg:flex-row items-stretch bg-background">
-        {/* Content */}
-        <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-24">
+        {/* Content — text below image on mobile, left side on desktop */}
+        <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-24 order-2 lg:order-1">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-8 w-fit">
             <Zap className="h-3.5 w-3.5 text-accent" />
@@ -77,10 +77,10 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           </div>
         </div>
 
-        {/* Image — full natural size, no crop */}
-        <div className="w-full lg:w-1/2 flex-shrink-0">
+        {/* Image — full natural size, no crop, appears first on mobile */}
+        <div className="w-full lg:w-1/2 flex-shrink-0 order-1 lg:order-2">
           <img
-            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784571827406-0rx0ikdy80ws.webp"
+            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784572650106-subv7k2985h.webp"
             alt="Smilo Cepillo Eléctrico Sónico"
             className="w-full h-auto block"
             fetchPriority="high"
