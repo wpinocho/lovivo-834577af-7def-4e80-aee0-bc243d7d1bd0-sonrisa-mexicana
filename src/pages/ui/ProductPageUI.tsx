@@ -704,7 +704,6 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               verified: true,
               text: 'Lo compré dudando si valdría la pena el precio. Vale cada peso. Mis dientes se sienten recién limpios del dentista cada mañana.',
               stars: 5,
-              image: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784519722621-isl1ycckt0j.webp',
             },
             {
               name: 'Valentina Cruz',
