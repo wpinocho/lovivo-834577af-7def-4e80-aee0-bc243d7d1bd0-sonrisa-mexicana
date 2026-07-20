@@ -523,13 +523,6 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           <div className="mt-16 border-t pt-14">
             <h2 className="text-2xl font-black tracking-tight text-foreground mb-2">El paquete incluye</h2>
             <p className="text-muted-foreground text-base mb-8">3 cabezales de repuesto para cepillo dental eléctrico sónico SMILO</p>
-            <div className="w-full rounded-2xl overflow-hidden">
-              <img
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784519722621-isl1ycckt0j.webp"
-                alt="Pack 3 cabezales Smilo"
-                className="w-full h-auto object-contain"
-              />
-            </div>
           </div>
           {/* ── CABEZALES: Descripción ── */}
           <div className="mt-14 pb-8">
