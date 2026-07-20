@@ -676,6 +676,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               verified: true,
               text: 'Lo compré dudando si valdría la pena el precio. Vale cada peso. Mis dientes se sienten recién limpios del dentista cada mañana.',
               stars: 5,
+              image: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784519722621-isl1ycckt0j.webp',
             },
             {
               name: 'Valentina Cruz',
@@ -691,24 +692,31 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               text: 'Tenía periodontitis leve y mi dentista me recomendó un sónico. El Smilo cumple perfecto. Además el diseño es elegante, se ve caro.',
               stars: 5,
             },
-          ].map(({ name, city, verified, text, stars }) => (
-            <div key={name} className="bg-muted/40 rounded-2xl p-6 border border-border relative">
-              <Quote className="absolute top-4 right-4 h-6 w-6 text-accent/20" />
-              <div className="flex gap-1 mb-3">
-                {[...Array(stars)].map((_, i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-accent text-accent" />
-                ))}
-              </div>
-              <p className="text-foreground/80 text-sm leading-relaxed mb-5">"{text}"</p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-accent font-bold text-xs">{name.charAt(0)}</span>
+          ].map(({ name, city, verified, text, stars, image }: { name: string; city: string; verified: boolean; text: string; stars: number; image?: string }) => (
+            <div key={name} className="bg-muted/40 rounded-2xl border border-border relative overflow-hidden">
+              {image && (
+                <div className="w-full h-48 overflow-hidden">
+                  <img src={image} alt={`Foto de ${name}`} className="w-full h-full object-cover" />
                 </div>
-                <div>
-                  <div className="font-semibold text-foreground text-sm">{name}</div>
-                  <div className="text-muted-foreground text-xs flex items-center gap-1">
-                    {city}
-                    {verified && <span className="text-candy font-medium">· Compra verificada</span>}
+              )}
+              <div className="p-6">
+                <Quote className="absolute top-4 right-4 h-6 w-6 text-accent/20" />
+                <div className="flex gap-1 mb-3">
+                  {[...Array(stars)].map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-accent text-accent" />
+                  ))}
+                </div>
+                <p className="text-foreground/80 text-sm leading-relaxed mb-5">"{text}"</p>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-accent font-bold text-xs">{name.charAt(0)}</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground text-sm">{name}</div>
+                    <div className="text-muted-foreground text-xs flex items-center gap-1">
+                      {city}
+                      {verified && <span className="text-candy font-medium">· Compra verificada</span>}
+                    </div>
                   </div>
                 </div>
               </div>
