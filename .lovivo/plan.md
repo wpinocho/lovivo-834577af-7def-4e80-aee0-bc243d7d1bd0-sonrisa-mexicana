@@ -79,7 +79,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `tailwind.config.ts` — spark and candy tokens
 - `src/templates/EcommerceTemplate.tsx` — Promo bar + scrolling bar above header (2026-07-18)
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
-- `src/pages/ui/IndexUI.tsx` — Hero redesigned; social proof bar removed from middle; Products section moved to after Trust Badges
+- `src/pages/ui/IndexUI.tsx` — Hero redesigned; products section moved above "Así de simple"
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — Updated to new Smilo logo image (2026-07-18 v2)
@@ -116,29 +116,29 @@ Below the 2-col grid (gallery + purchase controls), full-width sections in order
 ## Homepage Section Order (as of 2026-07-20)
 1. Hero
 2. Benefits (Cepillado de siguiente nivel)
-3. Cómo funciona (Así de simple)
-4. Reviews
-5. Bundles (if any)
-6. Trust Badges (30 días para devolver)
-7. **Nuestros productos** ← moved here
+3. **Nuestros productos** ← moved here (above "Así de simple")
+4. Así de simple (Cómo funciona)
+5. Reviews
+6. Bundles (if any)
+7. Trust Badges (30 días para devolver)
 8. Newsletter
 
 ## Recent Changes
-1. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
-2. 2026-07-20 — Homepage: moved "Nuestros productos" section to after Trust Badges section
-3. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
-4. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
-5. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
-6. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
-7. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
-8. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
-9. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
-10. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
-11. 2026-07-20 — Dentistas footer CTA text changed to "Escríbenos" (link) → mailto:smilomexico@gmail.com
-12. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438; footer added "Contactar soporte" link
-13. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
-14. 2026-07-20 — Diego Torres review: unboxing image added (full, no crop, contained within card)
-15. 2026-07-18 — PDP color-image fix: displayImage priority corrected (currentImage before displayImages[0]) + local COLOR_IMAGE_MAP for Negro & Rosa
+1. 2026-07-20 — Homepage: "Nuestros productos" moved above "Así de simple" section
+2. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
+3. 2026-07-20 — Homepage: moved "Nuestros productos" section to after Trust Badges section (reverted)
+4. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
+5. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
+6. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
+7. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
+8. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
+9. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
+10. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
+11. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
+12. 2026-07-20 — Dentistas footer CTA text changed to "Escríbenos" (link) → mailto:smilomexico@gmail.com
+13. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438; footer added "Contactar soporte" link
+14. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
+15. 2026-07-20 — Diego Torres review: unboxing image added (full, no crop, contained within card)
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
