@@ -1,11 +1,11 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.** **Promo bar + scrolling social proof bar added above header site-wide.** **PDP body expanded with 4 new full-width sections below the 2-col grid.** **Color-image map added to PDP — clicking a color swatch now shows the correct product image.** **Homepage hero redesigned: new lifestyle girl+toothbrush image, split layout, no overlay, $899 MXN, no "Ver cómo funciona", warranty 12 meses, 5 modos, 1,240 reseñas, cada 6 meses. Suscripción Inteligente section removed.**
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.** **Promo bar + scrolling social proof bar added above header site-wide.** **PDP body expanded with 4 new full-width sections below the 2-col grid.** **Color-image map added to PDP — clicking a color swatch now shows the correct product image.** **Homepage hero redesigned: new lifestyle girl+toothbrush image, split layout, no overlay, $899 MXN, no "Ver cómo funciona", warranty 12 meses, 5 modos, 1,240 reseñas, cada 6 meses. Suscripción Inteligente section removed.** **Hero tagline updated to "Dientes sanos y luminosos."**
 
 ## Brand
 - **Name**: Smilo
-- **Tagline**: Tu boca. Reimaginada.
+- **Tagline**: Dientes sanos y luminosos.
 - **Market**: Mexico 🇲🇽
 - **Language**: Mexican Spanish
 - **Tone**: Young, fresh, confident. Premium but accessible. Apple-style simplicity.
@@ -79,7 +79,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `tailwind.config.ts` — spark and candy tokens
 - `src/templates/EcommerceTemplate.tsx` — Promo bar + scrolling bar above header (2026-07-18)
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
-- `src/pages/ui/IndexUI.tsx` — Hero redesigned; products section moved above "Así de simple"
+- `src/pages/ui/IndexUI.tsx` — Hero redesigned; section order updated; tagline changed
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — Updated to new Smilo logo image (2026-07-18 v2)
@@ -116,29 +116,28 @@ Below the 2-col grid (gallery + purchase controls), full-width sections in order
 ## Homepage Section Order (as of 2026-07-20)
 1. Hero
 2. Benefits (Cepillado de siguiente nivel)
-3. **Nuestros productos** ← moved here (above "Así de simple")
+3. **Nuestros productos** ← immediately before "Así de simple"
 4. Así de simple (Cómo funciona)
 5. Reviews
-6. Bundles (if any)
-7. Trust Badges (30 días para devolver)
-8. Newsletter
+6. Trust Badges (30 días para devolver)
+7. Newsletter
 
 ## Recent Changes
-1. 2026-07-20 — Homepage: "Nuestros productos" moved above "Así de simple" section
-2. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
-3. 2026-07-20 — Homepage: moved "Nuestros productos" section to after Trust Badges section (reverted)
-4. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
-5. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
-6. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
-7. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
-8. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
-9. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
-10. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
-11. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
-12. 2026-07-20 — Dentistas footer CTA text changed to "Escríbenos" (link) → mailto:smilomexico@gmail.com
-13. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438; footer added "Contactar soporte" link
-14. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
-15. 2026-07-20 — Diego Torres review: unboxing image added (full, no crop, contained within card)
+1. 2026-07-20 — Hero tagline changed to "Dientes sanos y luminosos."
+2. 2026-07-20 — Homepage: "Nuestros productos" moved to just before "Así de simple"
+3. 2026-07-20 — Homepage: scrolling announcement bar in middle of page removed
+4. 2026-07-20 — Homepage: "Nuestros productos" moved above "Así de simple" section
+5. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
+6. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
+7. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
+8. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
+9. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
+10. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
+11. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
+12. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
+13. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
+14. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438
+15. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.

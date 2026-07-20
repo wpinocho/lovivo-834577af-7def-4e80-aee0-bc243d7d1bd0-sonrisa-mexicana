@@ -44,9 +44,9 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-foreground leading-[0.95] mb-8">
-            Tu boca.
+            Dientes sanos
             <br />
-            <span className="text-accent">Reimaginada.</span>
+            <span className="text-accent">y luminosos.</span>
           </h1>
 
           <div className="mb-10">
