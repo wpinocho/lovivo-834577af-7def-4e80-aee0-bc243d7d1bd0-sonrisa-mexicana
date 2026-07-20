@@ -695,8 +695,8 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           ].map(({ name, city, verified, text, stars, image }: { name: string; city: string; verified: boolean; text: string; stars: number; image?: string }) => (
             <div key={name} className="bg-muted/40 rounded-2xl border border-border relative overflow-hidden">
               {image && (
-                <div className="w-full h-48 overflow-hidden">
-                  <img src={image} alt={`Foto de ${name}`} className="w-full h-full object-cover" />
+                <div className="w-full overflow-hidden bg-muted/60">
+                  <img src={image} alt={`Foto de ${name}`} className="w-full h-auto object-contain" />
                 </div>
               )}
               <div className="p-6">
