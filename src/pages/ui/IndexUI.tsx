@@ -34,17 +34,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
     <EcommerceTemplate showCart={true} layout="full-width">
 
       {/* ── HERO ── */}
-      <section className="relative flex flex-col lg:flex-row min-h-[90vh] overflow-hidden bg-background">
-        {/* Image — full width on mobile (top), right half on desktop */}
-        <div className="relative w-full lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full h-[70vw] min-h-[300px] lg:min-h-0">
-          <img
-            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784571827406-0rx0ikdy80ws.webp"
-            alt="Smilo Cepillo Eléctrico Sónico"
-            className="w-full h-full object-cover object-center"
-            fetchPriority="high"
-          />
-        </div>
-
+      <section className="relative flex flex-col lg:flex-row items-stretch bg-background">
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-24">
           {/* Badge */}
@@ -85,6 +75,16 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Image — full natural size, no crop */}
+        <div className="w-full lg:w-1/2 flex-shrink-0">
+          <img
+            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784571827406-0rx0ikdy80ws.webp"
+            alt="Smilo Cepillo Eléctrico Sónico"
+            className="w-full h-auto block"
+            fetchPriority="high"
+          />
         </div>
       </section>
 
