@@ -697,6 +697,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               verified: true,
               text: 'Lo compré dudando si valdría la pena el precio. Vale cada peso. Mis dientes se sienten recién limpios del dentista cada mañana.',
               stars: 5,
+              image: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784521108190-zk275upuu5e.webp',
             },
             {
               name: 'Valentina Cruz',
@@ -715,8 +716,13 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           ].map(({ name, city, verified, text, stars, image }: { name: string; city: string; verified: boolean; text: string; stars: number; image?: string }) => (
             <div key={name} className="bg-muted/40 rounded-2xl border border-border relative overflow-hidden">
               {image && (
-                <div className="w-full overflow-hidden bg-muted/60">
-                  <img src={image} alt={`Foto de ${name}`} className="w-full h-auto object-contain" />
+                <div className="w-full overflow-hidden rounded-t-2xl bg-muted/30">
+                  <img
+                    src={image}
+                    alt={`Foto de ${name}`}
+                    className="w-full h-auto object-contain block"
+                    style={{ maxHeight: '420px' }}
+                  />
                 </div>
               )}
               <div className="p-6">
