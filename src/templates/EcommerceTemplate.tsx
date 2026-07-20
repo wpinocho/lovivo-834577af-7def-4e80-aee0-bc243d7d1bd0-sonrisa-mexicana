@@ -48,6 +48,7 @@ export const EcommerceTemplate = ({
   const navLinks = [
     { label: 'Cepillo', to: '/productos/cepillo-elctrico-soniq' },
     { label: 'Cabezales', to: '/productos/cabezales-de-repuesto-soniq-pack-3' },
+    { label: 'Para Dentistas', to: '/dentistas' },
     { label: 'Nosotros', to: '/nosotros' },
     { label: 'FAQ', to: '/faq' },
   ]
@@ -188,6 +189,9 @@ export const EcommerceTemplate = ({
             <div className="space-y-2.5">
               <Link to="/faq" className="block text-background/50 hover:text-background text-sm transition-colors">
                 Preguntas frecuentes
+              </Link>
+              <Link to="/dentistas" className="block text-background/50 hover:text-background text-sm transition-colors">
+                Para Dentistas
               </Link>
               <Link to="/nosotros" className="block text-background/50 hover:text-background text-sm transition-colors">
                 Nosotros
