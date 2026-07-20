@@ -226,7 +226,9 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                 ))}
               </div>
               <span className="text-sm font-bold text-foreground">4.9</span>
-              <span className="text-sm text-muted-foreground">· 1,240 reseñas</span>
+              <span className="text-sm text-muted-foreground">
+                · {logic.product?.title?.toLowerCase().includes("cabezal") ? "12" : "1,240"} reseñas
+              </span>
             </div>
 
             {/* Urgency */}
