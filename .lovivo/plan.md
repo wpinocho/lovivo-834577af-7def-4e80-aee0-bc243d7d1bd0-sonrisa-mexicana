@@ -83,6 +83,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — Updated to new Smilo logo image (2026-07-18 v2)
 - `src/pages/ui/ProductPageUI.tsx` — Full PDP body expansion + color-image map + displayImage priority fix
+- `src/pages/ui/DentistasUI.tsx` — Form sends via mailto to smilomexico@gmail.com + footer CTA updated
 
 ## New Pages
 - `src/pages/Nosotros.tsx` — Brand story, values, stats
@@ -99,46 +100,47 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - **Tone**: Professional, close, trustworthy — not generic startup-speak
 - **Image**: `/dentistas-hero.webp` — AI-generated dental office with Smilo display
 - **Key message**: Zero inventory investment — consignment model
-- **CTA**: "Quiero ser distribuidor" → scrolls to contact form
-- **Form**: Nombre, Consultorio, Ciudad, Teléfono, Email → shows success toast (no backend yet)
-- **TODO**: Connect form to email/CRM when Supabase is connected
+- **CTA**: "Solicitar información" → scrolls to contact form
+- **Form**: Nombre, Consultorio, Ciudad, Teléfono, Email → opens mailto to smilomexico@gmail.com
+- **Footer CTA**: "¿Tienes preguntas antes de solicitar? Escríbenos" → mailto:smilomexico@gmail.com
+- **TODO**: Connect form to proper email/CRM when Supabase is connected
 
 ## PDP Body Structure (as of 2026-07-18)
 Below the 2-col grid (gallery + purchase controls), full-width sections in order:
 1. **Benefits grid** — 5 cards (2-col mobile, 5-col desktop): Batería 30d, 31,000 vib/min, 5 modos, Temporizador 2min, Garantía 12m
-2. **El paquete incluye** — 3 cards with green-mint bg (#eef4eb): Cepillo ($999 MXN), Cabezal gratis ($119 MXN), Cable USB-C gratis ($79 MXN)
+2. **El paquete incluye** — 3 cards with green-mint bg (#d8ecbf uniform): Cepillo ($999 MXN), Cabezal gratis ($119 MXN), Cable USB-C gratis ($79 MXN)
 3. **Dental clinics** — Split card: dentist photo (left) + quote from Dra. Mónica Vargas (right, dark bg)
-4. **Reviews section** — 6 review cards with 4.9/5 rating
+4. **Reviews section** — 6 review cards with 4.9/5 rating; Diego Torres card has unboxing photo
 
 ## Recent Changes
-1. 2026-07-18 — PDP color-image fix: displayImage priority corrected (currentImage before displayImages[0]) + local COLOR_IMAGE_MAP for Negro & Rosa
-2. 2026-07-18 — Replaced "Consultorios de México" section image with new dentist photo
-3. 2026-07-18 — "El paquete incluye" section restored to 3-card design (green-mint cards, numbered pink badges, price + Gratis labels)
-4. 2026-07-18 — "¿Qué incluye?" was temporarily replaced with a single full-width image, then reverted
-5. 2026-07-18 — PDP body: added benefits grid, what's included, dental clinics section; replaced description with short 2-line paragraph
-6. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
-7. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names
-8. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco
-9. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
-10. 2026-07-18 — PDP: reseñas changed to "1,240 reseñas verificadas en México"
-11. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image
-12. 2026-07-17 — PDP CRO upgrade: star rating, urgency, payment logos, Truck+Shield, 3 testimonials
-13. 2026-07-17 — Added reviews section to ProductPageUI (6 cards)
-14. 2026-07-17 — Selling plan renamed to "Suscripción" + 6 months interval
-15. 2026-07-17 — Removed ProfileMenu (iniciar sesión) from header
+1. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
+2. 2026-07-20 — Dentistas footer CTA text changed to "Escríbenos" (link) → mailto:smilomexico@gmail.com
+3. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438; footer added "Contactar soporte" link
+4. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
+5. 2026-07-20 — Diego Torres review: unboxing image added (full, no crop, contained within card)
+6. 2026-07-18 — PDP color-image fix: displayImage priority corrected (currentImage before displayImages[0]) + local COLOR_IMAGE_MAP for Negro & Rosa
+7. 2026-07-18 — Replaced "Consultorios de México" section image with new dentist photo
+8. 2026-07-18 — "El paquete incluye" section restored to 3-card design (green-mint cards, numbered pink badges, price + Gratis labels)
+9. 2026-07-18 — PDP body: added benefits grid, what's included, dental clinics section; replaced description with short 2-line paragraph
+10. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
+11. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names
+12. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco
+13. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
+14. 2026-07-18 — PDP: reseñas changed to "1,240 reseñas verificadas en México"
+15. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
-- 2026-07-17: Dentistas contact form shows success toast but doesn't actually send data anywhere — needs Supabase or email integration.
 - 2026-07-17: Logo has white background removed via mix-blend-mode: multiply — works on white/light backgrounds only.
 - 2026-07-18: Color images for Azul Noche, Naranja Cempasúchil, Blanco Sueño not yet mapped — user needs to upload those images.
+- 2026-07-20: Dentistas form uses mailto — opens user's email client, not a true server-side send. Needs Supabase/email integration for reliable delivery.
 
 ## Next Steps (Optional)
 - Upload Azul, Naranja, Blanco product images and add to COLOR_IMAGE_MAP in ProductPageUI.tsx
 - Replace review/testimonial placeholders with real customer reviews when available
 - Replace dentist quote with real dentist testimonial when available
 - Fill in actual pricing/commission values in the Términos section
-- Connect contact form to CRM or email (requires Supabase)
+- Connect contact form to CRM or email (requires Supabase) for reliable delivery
 - Delete Funda de Viaje product + collection from Dashboard if desired
 - Connect Supabase for order management
 - Set up Stripe payments (Dashboard > Configuración > Pagos)

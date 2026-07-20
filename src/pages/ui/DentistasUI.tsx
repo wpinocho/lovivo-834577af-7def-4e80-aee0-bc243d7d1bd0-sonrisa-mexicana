@@ -20,11 +20,18 @@ export default function DentistasUI() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
+
+    const subject = encodeURIComponent("Solicitud Programa Dentistas — " + form.nombre);
+    const body = encodeURIComponent(
+      `Nombre: ${form.nombre}\nConsultorio: ${form.consultorio}\nCiudad: ${form.ciudad}\nTeléfono: ${form.telefono}\nCorreo: ${form.email}`
+    );
+    window.location.href = `mailto:smilomexico@gmail.com?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
       setSending(false);
       setForm({ nombre: "", consultorio: "", ciudad: "", telefono: "", email: "" });
       toast({
-        title: "¡Solicitud recibida!",
+        title: "¡Solicitud enviada!",
         description: "Un asesor Smilo se pondrá en contacto contigo en menos de 24 horas.",
       });
     }, 1200);
@@ -303,10 +310,10 @@ export default function DentistasUI() {
         <p className="text-gray-500 text-sm">
           ¿Tienes preguntas antes de solicitar?{" "}
           <a
-            href="mailto:hola@smilo.mx"
+            href="mailto:smilomexico@gmail.com"
             className="text-accent font-semibold hover:underline"
           >
-            Escríbenos a hola@smilo.mx
+            Escríbenos
           </a>
         </p>
       </div>
