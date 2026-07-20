@@ -86,7 +86,7 @@ export default function DentistasUI() {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="bg-white font-sans">
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative bg-gradient-to-br from-[#0D0F14] via-[#1a1040] to-[#0D0F14] overflow-hidden">
