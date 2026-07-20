@@ -88,26 +88,6 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         </div>
       </section>
 
-      {/* ── SOCIAL PROOF BAR ── */}
-      <div className="bg-muted border-y overflow-hidden py-3">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex items-center gap-12 px-6">
-              {[
-                '⭐⭐⭐⭐⭐  "El mejor cepillo que he tenido" — Sofía R., CDMX',
-                '🦷  +5,000 clientes satisfechos en México',
-                '⭐⭐⭐⭐⭐  "Mis encías agradecidas" — Carlos M., MTY',
-                '🚚  Envíos en 24-48 hrs a toda la República',
-                '⭐⭐⭐⭐⭐  "Se lo recomendé a toda mi familia" — Ana G., GDL',
-                '✅  Recomendado por dentistas mexicanos',
-              ].map((text, j) => (
-                <span key={j} className="text-sm text-muted-foreground font-medium">{text}</span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* ── BENEFITS ── */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -253,45 +233,6 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         </div>
       </section>
 
-      {/* ── PRODUCTS SECTION ── */}
-      <section id="products" className="py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h2 className="text-4xl font-black tracking-tighter text-foreground">
-                {selectedCollectionId
-                  ? `Productos de ${collections.find((c) => c.id === selectedCollectionId)?.name || 'Colección'}`
-                  : 'Nuestros productos'}
-              </h2>
-              <p className="text-muted-foreground mt-1">Simple. Sin complicaciones.</p>
-            </div>
-            {selectedCollectionId && (
-              <Button variant="outline" onClick={handleShowAllProducts} className="rounded-full">
-                Ver todos
-              </Button>
-            )}
-          </div>
-
-          {loading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {[...Array(3)].map((_, i) => (
-                <div key={i} className="bg-muted rounded-2xl h-80 animate-pulse" />
-              ))}
-            </div>
-          ) : filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">No hay productos disponibles.</p>
-            </div>
-          )}
-        </div>
-      </section>
-
       {/* ── BUNDLES ── */}
       {!loadingBundles && bundles.length > 0 && (
         <section id="bundles" className="py-24 bg-background">
@@ -329,6 +270,45 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── PRODUCTS SECTION ── */}
+      <section id="products" className="py-24 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <h2 className="text-4xl font-black tracking-tighter text-foreground">
+                {selectedCollectionId
+                  ? `Productos de ${collections.find((c) => c.id === selectedCollectionId)?.name || 'Colección'}`
+                  : 'Nuestros productos'}
+              </h2>
+              <p className="text-muted-foreground mt-1">Simple. Sin complicaciones.</p>
+            </div>
+            {selectedCollectionId && (
+              <Button variant="outline" onClick={handleShowAllProducts} className="rounded-full">
+                Ver todos
+              </Button>
+            )}
+          </div>
+
+          {loading ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="bg-muted rounded-2xl h-80 animate-pulse" />
+              ))}
+            </div>
+          ) : filteredProducts.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {filteredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">No hay productos disponibles.</p>
+            </div>
+          )}
         </div>
       </section>
 
