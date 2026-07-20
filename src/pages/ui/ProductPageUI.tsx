@@ -495,28 +495,54 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             </div>
           </div>
 
-          <div className="space-y-3">
-            <p className="text-foreground leading-relaxed text-lg">
-              ¡Ya está! El cepillo que tus dientes estaban esperando — sin el precio absurdo.
-            </p>
-            <p className="text-foreground leading-relaxed text-lg">
-              Diseñado pensando en la recomendación de dentistas, el cepillo SMILO limpia a fondo con tecnología sónica, sin dañar tus encías, y se adapta a tu sonrisa para una limpieza profunda todos los días.
-            </p>
-            <div className="w-full rounded-2xl overflow-hidden mt-4">
-              <img
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784516025488-ko6ksz6t9qg.webp"
-                alt="Sin Smilo vs Con Smilo — comparación de limpieza sónica"
-                className="w-full h-auto object-cover"
-              />
+          {!logic.product?.title?.toLowerCase().includes("cabezal") && (
+            <div className="space-y-3">
+              <p className="text-foreground leading-relaxed text-lg">
+                ¡Ya está! El cepillo que tus dientes estaban esperando — sin el precio absurdo.
+              </p>
+              <p className="text-foreground leading-relaxed text-lg">
+                Diseñado pensando en la recomendación de dentistas, el cepillo SMILO limpia a fondo con tecnología sónica, sin dañar tus encías, y se adapta a tu sonrisa para una limpieza profunda todos los días.
+              </p>
+              <div className="w-full rounded-2xl overflow-hidden mt-4">
+                <img
+                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784516025488-ko6ksz6t9qg.webp"
+                  alt="Sin Smilo vs Con Smilo — comparación de limpieza sónica"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
-          </div>
+          )}
 
 
         </div>
       </div>
 
-      {/* ── BENEFITS GRID ── */}
-      <div className="mt-16 border-t pt-14">
+      {logic.product?.title?.toLowerCase().includes("cabezal") ? (
+        <>
+          {/* ── CABEZALES: El paquete incluye ── */}
+          <div className="mt-16 border-t pt-14">
+            <h2 className="text-2xl font-black tracking-tight text-foreground mb-2">El paquete incluye</h2>
+            <p className="text-muted-foreground text-base mb-8">3 cabezales de repuesto para cepillo dental eléctrico sónico SMILO</p>
+            <div className="w-full rounded-2xl overflow-hidden">
+              <img
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784519722621-isl1ycckt0j.webp"
+                alt="Pack 3 cabezales Smilo"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+          {/* ── CABEZALES: Descripción ── */}
+          <div className="mt-14 pb-8">
+            <h2 className="text-2xl font-black tracking-tight text-foreground mb-4">Descripción</h2>
+            <p className="text-foreground/80 leading-relaxed text-lg">
+              Cuida tus dientes y encías con un cepillado suave y eficaz. Diseñados en colaboración con dentistas, los cabezales compatibles con el cepillo dental sónico SMILO cuentan con cerdas suaves de nylon que eliminan la placa y limpian a profundidad sin maltratar las encías.
+            </p>
+          </div>
+        </>
+      ) : (
+        <>
+          {/* ── BENEFITS GRID ── */}
+          <div className="mt-16 border-t pt-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { icon: Battery,           stat: "30 días",   label: "Batería",       sub: "sin recargar" },
@@ -728,6 +754,8 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
 
 
       </div>
+        </>
+      )}
 
       {/* Sticky Add to Cart Bar */}
       {logic.inStock && (
