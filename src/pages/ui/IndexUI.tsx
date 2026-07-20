@@ -34,71 +34,56 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
     <EcommerceTemplate showCart={true} layout="full-width">
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-foreground">
-        {/* Background image */}
-        <div className="absolute inset-0">
+      <section className="relative flex flex-col lg:flex-row min-h-[90vh] overflow-hidden bg-background">
+        {/* Image — full width on mobile (top), right half on desktop */}
+        <div className="relative w-full lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full h-[70vw] min-h-[300px] lg:min-h-0">
           <img
-            src="/hero-toothbrush.webp"
+            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784571827406-0rx0ikdy80ws.webp"
             alt="Smilo Cepillo Eléctrico Sónico"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover object-center"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/80 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-2xl">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-4 py-1.5 mb-8">
-              <Zap className="h-3.5 w-3.5 text-accent" />
-              <span className="text-accent text-xs font-semibold tracking-wider uppercase">Tecnología Sónica</span>
-            </div>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-24">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-8 w-fit">
+            <Zap className="h-3.5 w-3.5 text-accent" />
+            <span className="text-accent text-xs font-semibold tracking-wider uppercase">Tecnología Sónica</span>
+          </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-background leading-[0.95] mb-6">
-              Tu boca.
-              <br />
-              <span className="text-accent">Reimaginada.</span>
-            </h1>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-foreground leading-[0.95] mb-8">
+            Tu boca.
+            <br />
+            <span className="text-accent">Reimaginada.</span>
+          </h1>
 
-            <p className="text-lg text-background/60 mb-10 max-w-lg leading-relaxed">
-              31,000 movimientos por minuto. Batería de 30 días. 
-              El cepillo que tus dientes estaban esperando — sin el precio absurdo.
-            </p>
+          <div className="mb-10">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:opacity-90 font-bold text-base h-14 px-8 rounded-full"
+            >
+              <Link to="/productos/cepillo-elctrico-soniq">
+                Comprar ahora — $899 MXN
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-background text-foreground hover:bg-background/90 font-bold text-base h-14 px-8 rounded-full"
-              >
-                <Link to="/productos/cepillo-elctrico-soniq">
-                  Comprar ahora — $799
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="ghost"
-                size="lg"
-                className="text-background/70 hover:text-background hover:bg-background/10 font-medium text-base h-14 px-6"
-              >
-                <Link to="#como-funciona">Ver cómo funciona</Link>
-              </Button>
-            </div>
-
-            {/* Mini trust signals */}
-            <div className="flex flex-wrap gap-6 mt-10">
-              {[
-                { icon: Truck, text: 'Envío gratis +$699' },
-                { icon: ShieldCheck, text: 'Garantía 2 años' },
-                { icon: RefreshCw, text: '30 días de prueba' },
-              ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-2 text-background/60 text-sm">
-                  <Icon className="h-4 w-4 text-background/80" />
-                  <span>{text}</span>
-                </div>
-              ))}
-            </div>
+          {/* Mini trust signals */}
+          <div className="flex flex-wrap gap-6">
+            {[
+              { icon: Truck, text: 'Envío gratis +$699' },
+              { icon: ShieldCheck, text: 'Garantía 12 meses' },
+              { icon: RefreshCw, text: '30 días de prueba' },
+            ].map(({ icon: Icon, text }) => (
+              <div key={text} className="flex items-center gap-2 text-muted-foreground text-sm">
+                <Icon className="h-4 w-4 text-foreground/50" />
+                <span>{text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -154,8 +139,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               },
               {
                 icon: ShieldCheck,
-                title: '4 modos de cepillado',
-                desc: 'Limpieza, blancura, encías sensibles y masaje — para cada necesidad.',
+                title: '5 modos de cepillado',
+                desc: 'Limpieza, blancura, encías sensibles, masaje y pulido — para cada necesidad.',
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="group text-center p-6 rounded-2xl hover:bg-muted transition-colors">
@@ -197,7 +182,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               {
                 step: '03',
                 title: 'Renueva tu cabezal',
-                desc: 'Cada 3 meses, activa tu suscripción y recibe cabezales nuevos automáticamente. Sin pensar en ello.',
+                desc: 'Cada 6 meses, activa tu suscripción y recibe cabezales nuevos automáticamente. Sin pensar en ello.',
               },
             ].map(({ step, title, desc }) => (
               <div key={step} className="relative">
@@ -214,78 +199,6 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
 
 
-      {/* ── SUBSCRIPTION SECTION ── */}
-      <section className="py-24 bg-foreground text-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-accent/20 rounded-full px-4 py-1.5 mb-8">
-                <RefreshCw className="h-3.5 w-3.5 text-accent" />
-                <span className="text-accent text-xs font-semibold tracking-wider uppercase">Suscripción inteligente</span>
-              </div>
-              <h2 className="text-4xl font-black tracking-tighter mb-6 leading-tight">
-                Cabezales nuevos,
-                <br />
-                <span className="text-accent">sin que tengas que acordarte.</span>
-              </h2>
-              <p className="text-background/60 text-lg mb-8 leading-relaxed">
-                Tu cabezal pierde efectividad después de 3 meses. Con nuestra suscripción, 
-                llega solo a tu puerta — y ahorras 20% en cada envío.
-              </p>
-              <ul className="space-y-4 mb-10">
-                {[
-                  'Pack de 3 cabezales cada trimestre',
-                  '20% de descuento en cada envío automático',
-                  'Cancela cuando quieras, sin penalizaciones',
-                  'Envío gratuito incluido en la suscripción',
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-background/70">
-                    <CheckCircle2 className={`h-5 w-5 flex-shrink-0 text-spark`} />
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button
-                asChild
-                size="lg"
-                className="bg-warm-gradient text-spark-foreground hover:opacity-90 font-bold h-14 px-8 rounded-full border-0 shadow-lg shadow-spark/30"
-              >
-                <Link to="/productos/cabezales-de-repuesto-soniq-pack-3">
-                  Activar suscripción
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-
-            <div className="relative">
-              <div className="bg-background/5 rounded-3xl p-8 border border-background/10">
-                {/* Subscription card visual */}
-                <div className="bg-background rounded-2xl p-6 mb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <div className="font-bold text-foreground text-sm">Cabezales de Repuesto</div>
-                      <div className="text-muted-foreground text-xs">Pack de 3 — cada 3 meses</div>
-                    </div>
-                    <img
-                      src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/834577af-7def-4e80-aee0-bc243d7d1bd0/cabezales-repuesto.webp"
-                      alt="Cabezales de repuesto"
-                      className="w-14 h-14 object-cover rounded-xl"
-                    />
-                  </div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-black text-foreground">$199</span>
-                    <span className="text-muted-foreground text-sm line-through">$249</span>
-                    <span className="bg-accent/10 text-accent text-xs font-bold px-2 py-0.5 rounded-full">-20%</span>
-                  </div>
-                </div>
-                <div className="text-center text-background/40 text-xs">
-                  ✓ Se renueva automáticamente · Cancela cuando quieras
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── REVIEWS ── */}
       <section className="py-24 bg-background">
@@ -299,7 +212,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             <h2 className="text-4xl font-black tracking-tighter text-foreground mb-2">
               4.9 / 5 estrellas
             </h2>
-            <p className="text-muted-foreground">Basado en +2,000 reseñas de clientes en México</p>
+            <p className="text-muted-foreground">Basado en 1,240 reseñas de clientes en México</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -401,7 +314,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { icon: Truck, title: 'Envío gratis', desc: 'En pedidos +$699 MXN a toda la República' },
-              { icon: ShieldCheck, title: 'Garantía 2 años', desc: 'Contra defectos de fabricación' },
+              { icon: ShieldCheck, title: 'Garantía 12 meses', desc: 'Contra defectos de fabricación' },
               { icon: RefreshCw, title: '30 días para devolver', desc: 'Si no te convence, te regresamos tu dinero' },
               { icon: CreditCard, title: 'Pago seguro', desc: 'Tarjeta, Oxxo, SPEI y Mercado Pago' },
             ].map(({ icon: Icon, title, desc }) => (

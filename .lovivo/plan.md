@@ -1,7 +1,7 @@
 # Smilo — Cepillo Eléctrico para México 🇲🇽
 
 ## Current State
-Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.** **Promo bar + scrolling social proof bar added above header site-wide.** **PDP body expanded with 4 new full-width sections below the 2-col grid.** **Color-image map added to PDP — clicking a color swatch now shows the correct product image.**
+Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Viaje removed from navigation and footer. Brand renamed from SONIQ to **Smilo**. New dentist distribution landing page live at `/dentistas`. **Color palette updated to MyVariations-inspired blue + pink.** **Real Smilo logo image integrated (black wordmark with smile arc).** **ProfileMenu (iniciar sesión) removed from header.** **Color variant names translated to Mexican Spanish.** **PDP color selector updated to circular swatches with poetic Spanish names.** **Promo bar + scrolling social proof bar added above header site-wide.** **PDP body expanded with 4 new full-width sections below the 2-col grid.** **Color-image map added to PDP — clicking a color swatch now shows the correct product image.** **Homepage hero redesigned: new lifestyle girl+toothbrush image, split layout, no overlay, $899 MXN, no "Ver cómo funciona", warranty 12 meses, 5 modos, 1,240 reseñas, cada 6 meses. Suscripción Inteligente section removed.**
 
 ## Brand
 - **Name**: Smilo
@@ -66,11 +66,12 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - Displays as: "Suscripción — $199 / 6 meses"
 
 ## Images
-- `/hero-toothbrush.webp` — Hero background (public folder)
+- `/hero-smilo.webp` — New hero lifestyle image (girl + pink Smilo, blue sky) — UPDATED 2026-07-20
 - `/dentistas-hero.webp` — Dental office with Smilo display (hero for /dentistas)
 - `products/cepillo-electrico-soniq.webp` — Product shot
 - `products/cabezales-repuesto.webp` — Replacement heads
 - Logo: `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784402648948-wabf8o8ttxo.webp` (UPDATED 2026-07-18)
+- Hero girl image: `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784571827406-0rx0ikdy80ws.webp`
 - Dental clinic photo (PDP): `https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784415483079-wg27o6izdn.webp` (UPDATED 2026-07-18)
 
 ## Files Modified
@@ -78,7 +79,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 - `tailwind.config.ts` — spark and candy tokens
 - `src/templates/EcommerceTemplate.tsx` — Promo bar + scrolling bar above header (2026-07-18)
 - `src/templates/PageTemplate.tsx` — No py-6 for full-width layout
-- `src/pages/ui/IndexUI.tsx` — Hero section: bg-hero-gradient (blue), pink CTA button, white badge/icons
+- `src/pages/ui/IndexUI.tsx` — Hero redesigned (split layout, new image, $899, 12 meses, 5 modos, 1,240 reseñas); Suscripción Inteligente section removed; cada 6 meses
 - `src/components/CollectionCard.tsx` — Overlay card design, minimal
 - `src/components/ui/ProductCardUI.tsx` — Clean minimal card with rounded-full CTA
 - `src/components/BrandLogoLeft.tsx` — Updated to new Smilo logo image (2026-07-18 v2)
@@ -107,27 +108,27 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 
 ## PDP Body Structure (as of 2026-07-18)
 Below the 2-col grid (gallery + purchase controls), full-width sections in order:
-1. **Benefits grid** — 5 cards (2-col mobile, 5-col desktop): Batería 30d, 31,000 vib/min, 5 modos, Temporizador 2min, Garantía 12m
+1. **Benefits grid** — 4 cards (2-col mobile, 4-col desktop): Batería 30d, 31,000 vib/min, 5 modos, Temporizador 2min
 2. **El paquete incluye** — 3 cards with green-mint bg (#d8ecbf uniform): Cepillo ($999 MXN), Cabezal gratis ($119 MXN), Cable USB-C gratis ($79 MXN)
 3. **Dental clinics** — Split card: dentist photo (left) + quote from Dra. Mónica Vargas (right, dark bg)
 4. **Reviews section** — 6 review cards with 4.9/5 rating; Diego Torres card has unboxing photo
 
 ## Recent Changes
-1. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
-2. 2026-07-20 — Dentistas footer CTA text changed to "Escríbenos" (link) → mailto:smilomexico@gmail.com
-3. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438; footer added "Contactar soporte" link
-4. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
-5. 2026-07-20 — Diego Torres review: unboxing image added (full, no crop, contained within card)
-6. 2026-07-18 — PDP color-image fix: displayImage priority corrected (currentImage before displayImages[0]) + local COLOR_IMAGE_MAP for Negro & Rosa
-7. 2026-07-18 — Replaced "Consultorios de México" section image with new dentist photo
-8. 2026-07-18 — "El paquete incluye" section restored to 3-card design (green-mint cards, numbered pink badges, price + Gratis labels)
-9. 2026-07-18 — PDP body: added benefits grid, what's included, dental clinics section; replaced description with short 2-line paragraph
-10. 2026-07-18 — Added pink promo bar ("15% descuento con JULIO15") + dark scrolling social proof bar above header site-wide
-11. 2026-07-18 — PDP: Color selector replaced with circular swatches + poetic Spanish names
-12. 2026-07-18 — Color variant names translated to Spanish: Negro, Azul, Naranja, Rosa, Blanco
-13. 2026-07-18 — Updated logo to new Smilo image v2 (cleaner wordmark, same style)
-14. 2026-07-18 — PDP: reseñas changed to "1,240 reseñas verificadas en México"
-15. 2026-07-18 — PDP: urgency "6 unidades" → "4 unidades", rating 4.8 → 4.9, payment logos = checkout image
+1. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
+2. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
+3. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
+4. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
+5. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
+6. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
+7. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
+8. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
+9. 2026-07-20 — Dentistas footer CTA text changed to "Escríbenos" (link) → mailto:smilomexico@gmail.com
+10. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438; footer added "Contactar soporte" link
+11. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
+12. 2026-07-20 — Diego Torres review: unboxing image added (full, no crop, contained within card)
+13. 2026-07-18 — PDP color-image fix: displayImage priority corrected (currentImage before displayImages[0]) + local COLOR_IMAGE_MAP for Negro & Rosa
+14. 2026-07-18 — Replaced "Consultorios de México" section image with new dentist photo
+15. 2026-07-18 — "El paquete incluye" section restored to 3-card design (green-mint cards, numbered pink badges, price + Gratis labels)
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
