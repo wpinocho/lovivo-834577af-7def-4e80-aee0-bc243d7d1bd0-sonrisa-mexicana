@@ -49,7 +49,6 @@ export const EcommerceTemplate = ({
     { label: 'Cepillo', to: '/productos/cepillo-elctrico-soniq' },
     { label: 'Cabezales', to: '/productos/cabezales-de-repuesto-soniq-pack-3' },
     { label: 'Para Dentistas', to: '/dentistas' },
-    { label: 'Nosotros', to: '/nosotros' },
     { label: 'FAQ', to: '/faq' },
   ]
 
@@ -192,9 +191,6 @@ export const EcommerceTemplate = ({
               </Link>
               <Link to="/dentistas" className="block text-background/50 hover:text-background text-sm transition-colors">
                 Para Dentistas
-              </Link>
-              <Link to="/nosotros" className="block text-background/50 hover:text-background text-sm transition-colors">
-                Nosotros
               </Link>
               <a
                 href="https://wa.me/5262319443800"
