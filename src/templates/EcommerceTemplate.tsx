@@ -32,8 +32,10 @@ const scrollingItems = [
 function getTimeUntilMidnight(): string {
   const now = new Date()
   const midnight = new Date(now)
+  // setHours(24, 0, 0, 0) always resolves to the start of the NEXT calendar day,
+  // so after midnight passes the reference automatically shifts to the following night.
   midnight.setHours(24, 0, 0, 0)
-  const diff = midnight.getTime() - now.getTime()
+  const diff = Math.max(0, midnight.getTime() - now.getTime())
   const h = Math.floor(diff / 3_600_000)
   const m = Math.floor((diff % 3_600_000) / 60_000)
   const s = Math.floor((diff % 60_000) / 1_000)
