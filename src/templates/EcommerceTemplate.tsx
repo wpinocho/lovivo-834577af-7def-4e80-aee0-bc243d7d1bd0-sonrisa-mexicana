@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useState, useEffect } from 'react'
 import { PageTemplate } from './PageTemplate'
 import { BrandLogoLeft } from '@/components/BrandLogoLeft'
 import { SocialLinks } from '@/components/SocialLinks'
@@ -29,6 +29,17 @@ const scrollingItems = [
   '✅  Recomendado por dentistas mexicanos',
 ]
 
+function getTimeUntilMidnight(): string {
+  const now = new Date()
+  const midnight = new Date(now)
+  midnight.setHours(24, 0, 0, 0)
+  const diff = midnight.getTime() - now.getTime()
+  const h = Math.floor(diff / 3_600_000)
+  const m = Math.floor((diff % 3_600_000) / 60_000)
+  const s = Math.floor((diff % 60_000) / 1_000)
+  return [h, m, s].map((v) => String(v).padStart(2, '0')).join(':')
+}
+
 export const EcommerceTemplate = ({
   children,
   pageTitle,
@@ -44,6 +55,12 @@ export const EcommerceTemplate = ({
   const { getTotalItems } = useCart()
   const totalItems = getTotalItems()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [countdown, setCountdown] = useState(getTimeUntilMidnight)
+
+  useEffect(() => {
+    const timer = setInterval(() => setCountdown(getTimeUntilMidnight()), 1000)
+    return () => clearInterval(timer)
+  }, [])
 
   const navLinks = [
     { label: 'Cepillo', to: '/productos/cepillo-elctrico-soniq' },
@@ -55,10 +72,12 @@ export const EcommerceTemplate = ({
   const header = (
     <div className={headerClassName}>
       {/* ── PROMO BAR ── */}
-      <div className="bg-spark py-3 px-4 text-center">
-        <p className="text-base font-black text-white tracking-wide">
-          15% de descuento con el código{' '}
-          <span className="underline underline-offset-2">JULIO15</span>
+      <div className="bg-spark py-2.5 px-4 text-center">
+        <p className="text-sm sm:text-base font-black text-white tracking-wide flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5">
+          <span className="line-through opacity-70">$1,199</span>
+          <span className="text-white">$899</span>
+          <span className="opacity-80 font-medium">— Oferta termina en</span>
+          <span className="font-black tabular-nums">{countdown}</span>
         </p>
       </div>
 
