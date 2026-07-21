@@ -196,12 +196,6 @@ export const EcommerceTemplate = ({
               <Link to="/nosotros" className="block text-background/50 hover:text-background text-sm transition-colors">
                 Nosotros
               </Link>
-              <Link to="/mis-pedidos" className="block text-background/50 hover:text-background text-sm transition-colors">
-                Mis pedidos
-              </Link>
-              <Link to="/blog" className="block text-background/50 hover:text-background text-sm transition-colors">
-                Blog
-              </Link>
               <a
                 href="https://wa.me/5262319443800"
                 target="_blank"
