@@ -48,7 +48,7 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 | Color | Image |
 |-------|-------|
 | Negro | `j7q5unamj4.webp` (dentist holding black Smilo) — UPDATED 2026-07-21 |
-| Rosa  | `1784411895621-swfyokqws0m.webp` (pink Smilo product shot) |
+| Rosa  | `yldh03u35wm.webp` (pink Smilo + box on pink bg) — UPDATED 2026-07-21 |
 | Naranja | `2w2d67tczyh.webp` (orange Smilo + box on orange bg) — ADDED 2026-07-21 |
 | Blanco | `8ing2c7tkht.webp` (white Smilo product shot) — ADDED 2026-07-21 |
 | Azul  | (pending — user to upload) |
@@ -116,28 +116,28 @@ Below the 2-col grid (gallery + purchase controls), full-width sections in order
 ## Homepage Section Order (as of 2026-07-21)
 1. Hero
 2. Benefits (Cepillado de siguiente nivel)
-3. Así de simple (Cómo funciona)
-4. Reviews
-5. Trust Badges (30 días para devolver)
-6. **Nuestros productos** ← moved here, after trust badges... wait, see recent changes
+3. Nuestros productos
+4. Así de simple (Cómo funciona)
+5. Reviews
+6. Trust Badges (30 días para devolver)
 7. Newsletter
 
 ## Recent Changes
-1. 2026-07-21 — PDP COLOR_IMAGE_MAP: Naranja → 2w2d67tczyh.webp, Blanco → 8ing2c7tkht.webp
-2. 2026-07-21 — PDP COLOR_IMAGE_MAP: Negro updated to j7q5unamj4.webp
-3. 2026-07-20 — Hero tagline changed to "Dientes sanos y luminosos."
-4. 2026-07-20 — Homepage: "Nuestros productos" moved to just before "Así de simple"
-5. 2026-07-20 — Homepage: scrolling announcement bar in middle of page removed
-6. 2026-07-20 — Homepage: "Nuestros productos" moved above "Así de simple" section
-7. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
-8. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
-9. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
-10. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
-11. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
-12. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
-13. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
-14. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
-15. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
+1. 2026-07-21 — PDP COLOR_IMAGE_MAP: Rosa updated to yldh03u35wm.webp (pink Smilo + box on pink bg)
+2. 2026-07-21 — PDP COLOR_IMAGE_MAP: Naranja → 2w2d67tczyh.webp, Blanco → 8ing2c7tkht.webp
+3. 2026-07-21 — PDP COLOR_IMAGE_MAP: Negro updated to j7q5unamj4.webp
+4. 2026-07-20 — Hero tagline changed to "Dientes sanos y luminosos."
+5. 2026-07-20 — Homepage: "Nuestros productos" moved to just before "Así de simple"
+6. 2026-07-20 — Homepage: scrolling announcement bar in middle of page removed
+7. 2026-07-20 — Homepage: "Nuestros productos" moved above "Así de simple" section
+8. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
+9. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
+10. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
+11. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
+12. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
+13. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
+14. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
+15. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
