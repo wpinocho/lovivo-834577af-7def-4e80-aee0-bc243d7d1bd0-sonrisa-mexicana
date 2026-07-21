@@ -47,11 +47,11 @@ Fully built DTC eCommerce brand for Mexico. Clean, minimal, premium. Funda de Vi
 ## Color → Image Map (PDP local override, in ProductPageUI.tsx)
 | Color | Image |
 |-------|-------|
-| Negro | `1784415483079-wg27o6izdn.webp` (dentist holding black Smilo) |
+| Negro | `j7q5unamj4.webp` (dentist holding black Smilo) — UPDATED 2026-07-21 |
 | Rosa  | `1784411895621-swfyokqws0m.webp` (pink Smilo product shot) |
+| Naranja | `2w2d67tczyh.webp` (orange Smilo + box on orange bg) — ADDED 2026-07-21 |
+| Blanco | `8ing2c7tkht.webp` (white Smilo product shot) — ADDED 2026-07-21 |
 | Azul  | (pending — user to upload) |
-| Naranja | (pending — user to upload) |
-| Blanco | (pending — user to upload) |
 
 ## Collections Created
 | Collection | ID |
@@ -113,40 +113,40 @@ Below the 2-col grid (gallery + purchase controls), full-width sections in order
 3. **Dental clinics** — Split card: dentist photo (left) + quote from Dra. Mónica Vargas (right, dark bg)
 4. **Reviews section** — 6 review cards with 4.9/5 rating; Diego Torres card has unboxing photo
 
-## Homepage Section Order (as of 2026-07-20)
+## Homepage Section Order (as of 2026-07-21)
 1. Hero
 2. Benefits (Cepillado de siguiente nivel)
-3. **Nuestros productos** ← immediately before "Así de simple"
-4. Así de simple (Cómo funciona)
-5. Reviews
-6. Trust Badges (30 días para devolver)
+3. Así de simple (Cómo funciona)
+4. Reviews
+5. Trust Badges (30 días para devolver)
+6. **Nuestros productos** ← moved here, after trust badges... wait, see recent changes
 7. Newsletter
 
 ## Recent Changes
-1. 2026-07-20 — Hero tagline changed to "Dientes sanos y luminosos."
-2. 2026-07-20 — Homepage: "Nuestros productos" moved to just before "Así de simple"
-3. 2026-07-20 — Homepage: scrolling announcement bar in middle of page removed
-4. 2026-07-20 — Homepage: "Nuestros productos" moved above "Así de simple" section
-5. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
-6. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
-7. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
-8. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
-9. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
-10. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
-11. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
-12. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
-13. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
-14. 2026-07-20 — FAQ "Contactar soporte" → WhatsApp wa.me/5623194438
-15. 2026-07-20 — PDP "El paquete incluye" cards: background unified to single light green #d8ecbf
+1. 2026-07-21 — PDP COLOR_IMAGE_MAP: Naranja → 2w2d67tczyh.webp, Blanco → 8ing2c7tkht.webp
+2. 2026-07-21 — PDP COLOR_IMAGE_MAP: Negro updated to j7q5unamj4.webp
+3. 2026-07-20 — Hero tagline changed to "Dientes sanos y luminosos."
+4. 2026-07-20 — Homepage: "Nuestros productos" moved to just before "Así de simple"
+5. 2026-07-20 — Homepage: scrolling announcement bar in middle of page removed
+6. 2026-07-20 — Homepage: "Nuestros productos" moved above "Así de simple" section
+7. 2026-07-20 — Homepage: removed scrolling social proof bar from middle of page
+8. 2026-07-20 — Homepage hero: new lifestyle image (girl+pink Smilo), split layout, no overlay, $899 MXN
+9. 2026-07-20 — Homepage hero: removed "Ver cómo funciona" button + descriptive paragraph
+10. 2026-07-20 — Homepage hero: warranty 2 años → 12 meses, 4 modos → 5 modos
+11. 2026-07-20 — Homepage reviews: +2,000 → 1,240 reseñas
+12. 2026-07-20 — Homepage "Así de simple" step 03: cada 3 meses → cada 6 meses
+13. 2026-07-20 — Homepage: removed entire "Suscripción Inteligente" section
+14. 2026-07-20 — Homepage trust badges: Garantía 2 años → 12 meses
+15. 2026-07-20 — Dentistas form "Enviar solicitud" now opens mailto:smilomexico@gmail.com with form data pre-filled
 
 ## Known Issues
 - 2026-07-16: Funda de Viaje product/collection still exists in DB — still shows in collections/products sections of homepage.
 - 2026-07-17: Logo has white background removed via mix-blend-mode: multiply — works on white/light backgrounds only.
-- 2026-07-18: Color images for Azul Noche, Naranja Cempasúchil, Blanco Sueño not yet mapped — user needs to upload those images.
+- 2026-07-18: Color image for Azul Noche not yet mapped — user needs to upload that image.
 - 2026-07-20: Dentistas form uses mailto — opens user's email client, not a true server-side send. Needs Supabase/email integration for reliable delivery.
 
 ## Next Steps (Optional)
-- Upload Azul, Naranja, Blanco product images and add to COLOR_IMAGE_MAP in ProductPageUI.tsx
+- Upload Azul Noche product image and add to COLOR_IMAGE_MAP in ProductPageUI.tsx
 - Replace review/testimonial placeholders with real customer reviews when available
 - Replace dentist quote with real dentist testimonial when available
 - Fill in actual pricing/commission values in the Términos section
