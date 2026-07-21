@@ -214,7 +214,7 @@ export const EcommerceTemplate = ({
                 Para Dentistas
               </Link>
               <a
-                href="https://wa.me/5262319443800"
+                href="https://wa.me/525623194438"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-background/50 hover:text-background text-sm transition-colors"

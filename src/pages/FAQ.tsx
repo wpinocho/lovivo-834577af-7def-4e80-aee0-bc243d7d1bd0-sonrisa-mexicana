@@ -162,7 +162,7 @@ export default function FAQ() {
             Escríbenos por WhatsApp o al correo y te respondemos en menos de 24 horas.
           </p>
           <Button asChild size="lg" className="rounded-full font-bold">
-            <a href="https://wa.me/5262319443800" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/525623194438" target="_blank" rel="noopener noreferrer">
               Contactar soporte
             </a>
           </Button>
