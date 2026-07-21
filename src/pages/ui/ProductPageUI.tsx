@@ -71,7 +71,7 @@ interface ProductPageUIProps {
 
 // Local color → image override (shown when DB variants don't have per-color images)
 const COLOR_IMAGE_MAP: Record<string, string> = {
-  "Negro": "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784415483079-wg27o6izdn.webp",
+  "Negro": "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/products/j7q5unamj4.webp",
   "Rosa":  "https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/b3071cbc-7f37-49dd-bb09-3f7c8ce155aa/1784411895621-swfyokqws0m.webp",
 }
 
