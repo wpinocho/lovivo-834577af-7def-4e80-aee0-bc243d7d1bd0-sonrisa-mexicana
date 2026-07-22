@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 import { EcommerceTemplate } from "@/templates/EcommerceTemplate"
-import { ShoppingCart, ArrowLeft, Plus, Minus, RefreshCw, Star, Quote, Lock, Truck, Shield, Clock, Battery, Zap, SlidersHorizontal, Package, Gift, CheckCircle, MapPin } from "lucide-react"
+import { ShoppingCart, ArrowLeft, Plus, Minus, RefreshCw, Star, Quote, Lock, Truck, Shield, Clock, Battery, Zap, SlidersHorizontal, Package, Gift, CheckCircle, MapPin, Loader2 } from "lucide-react"
 import { Link } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import {
@@ -463,8 +463,16 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                   variant="outline"
                   className="w-full"
                   size="lg"
+                  disabled={logic.isBuyingNow}
                 >
-                  Comprar ahora
+                  {logic.isBuyingNow ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Procesando...
+                    </>
+                  ) : (
+                    'Comprar ahora'
+                  )}
                 </Button>
               )}
               

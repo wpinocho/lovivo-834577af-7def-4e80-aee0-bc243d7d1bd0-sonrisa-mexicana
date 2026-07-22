@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase, type Product as ProductType, type SellingPlan } from '@/lib/supabase'
 import { STORE_ID } from '@/lib/config'
-import { useCart } from '@/contexts/CartContext'
+import { useCart, type CartProductItem } from '@/contexts/CartContext'
 import { useCartUI } from '@/components/CartProvider'
 import { useToast } from '@/hooks/use-toast'
 import { useSettings } from '@/contexts/SettingsContext'
@@ -10,6 +10,8 @@ import { trackViewContent, trackAddToCart, tracking } from '@/lib/tracking-utils
 import { isVariantAvailable } from '@/lib/utils'
 import { useSellingPlans } from '@/hooks/useSellingPlans'
 import { calcSubscriptionPrice } from '@/lib/subscription-utils'
+import { createCheckoutFromCart } from '@/lib/checkout'
+import { useCheckoutState } from '@/hooks/useCheckoutState'
 
 /**
  * FORBIDDEN HEADLESS COMPONENT - HeadlessProduct
@@ -39,6 +41,8 @@ export const useProductLogic = () => {
   const { toast } = useToast()
   const { formatMoney, currencyCode } = useSettings()
   const { plans: sellingPlans } = useSellingPlans(product?.id)
+  const { saveCheckoutState } = useCheckoutState()
+  const [isBuyingNow, setIsBuyingNow] = useState(false)
 
   useEffect(() => {
     if (slug) {
@@ -274,8 +278,8 @@ export const useProductLogic = () => {
     setTimeout(() => openCart(), 300)
   }
 
-  const handleBuyNow = () => {
-    if (!product) return
+  const handleBuyNow = async () => {
+    if (!product || isBuyingNow) return
     
     const variants = (product as any).variants
     const hasVars = Array.isArray(variants) && variants.length > 0
@@ -289,33 +293,67 @@ export const useProductLogic = () => {
       return
     }
     
-    for (let i = 0; i < quantity; i++) {
-      const added = addItem(product, variantToAdd, selectedPlan || undefined)
-      if (!added) {
-        toast({
-          title: "Solo un plan de suscripción por carrito",
-          description: "Elimina la suscripción actual para agregar una diferente.",
-          variant: "destructive"
-        })
-        return
+    setIsBuyingNow(true)
+    try {
+      // Build a CartProductItem directly — bypasses cart state timing issues
+      const buyNowItem: CartProductItem = {
+        type: 'product',
+        key: `buynow:${product.id}${variantToAdd ? `:${variantToAdd.id}` : ''}`,
+        product,
+        variant: variantToAdd,
+        sellingPlan: selectedPlan || undefined,
+        quantity,
       }
+      
+      // Create backend order (same as CartSidebar "Pagar" does)
+      const order = await createCheckoutFromCart(
+        [buyNowItem],
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        currencyCode
+      )
+      
+      // Persist checkout state so the /pagar page finds it
+      try {
+        sessionStorage.setItem('checkout_order', JSON.stringify(order))
+        sessionStorage.setItem('checkout_order_id', String(order.order_id))
+      } catch {}
+      
+      saveCheckoutState({
+        order_id: order.order_id,
+        checkout_token: order.checkout_token,
+        store_id: STORE_ID,
+        order: order.order
+      })
+      
+      // Track event
+      const currentP = getCurrentPrice()
+      trackAddToCart({
+        products: [tracking.createTrackingProduct({
+          id: product.id,
+          title: product.title,
+          price: currentP,
+          category: 'product',
+          variant: variantToAdd
+        })],
+        value: currentP * quantity,
+        currency: tracking.getCurrencyFromSettings(currencyCode),
+        num_items: quantity
+      })
+      
+      navigate('/pagar')
+    } catch (error) {
+      toast({
+        title: "Error al procesar",
+        description: "No se pudo iniciar la compra. Intenta de nuevo.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsBuyingNow(false)
     }
-    
-    const currentP = getCurrentPrice()
-    trackAddToCart({
-      products: [tracking.createTrackingProduct({
-        id: product.id,
-        title: product.title,
-        price: currentP,
-        category: 'product',
-        variant: variantToAdd
-      })],
-      value: currentP * quantity,
-      currency: tracking.getCurrencyFromSettings(currencyCode),
-      num_items: quantity
-    })
-    
-    navigate('/pagar')
   }
 
   const handleNavigateBack = () => navigate(-1)
@@ -379,6 +417,7 @@ export const useProductLogic = () => {
     // Actions
     handleAddToCart,
     handleBuyNow,
+    isBuyingNow,
     handleNavigateBack,
     handleNavigateToCart,
     handleOptionSelect,
